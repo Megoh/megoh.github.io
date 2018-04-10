@@ -1,9 +1,21 @@
 body{
    padding-top: 54px;
+   position: relative;
+   min-height: 100vh;
+   padding-bottom: 120px;
 }
 
 @media(min-width: 992px){
    body{
       padding-top: 56px;
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: 120px;
    }
+}
+
+#footer {
+   width: 100%;
+   position: absolute;
+   bottom: 0px;
 }
