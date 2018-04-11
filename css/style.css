@@ -25,3 +25,8 @@ body{
    height: 200px;
    
 }
+
+.img {
+   background-size: contain;
+   background-repeat: no-repeat;
+}
