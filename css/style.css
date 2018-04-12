@@ -25,3 +25,9 @@ body{
    height: 200px;
    
 }
+
+#carouselExampleIndicators {
+   width: 400px;
+   max-height: 500px;
+   overflow: hidden;
+}
