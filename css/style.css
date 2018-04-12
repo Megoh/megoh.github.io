@@ -39,3 +39,11 @@ body{
 .carousel-caption {
    color: black;
 }
+
+.carousel-control-prev {
+   background-color: darkgray;
+}
+
+.carousel-control-next {
+   background-color: darkgray;
+}
