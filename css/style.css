@@ -26,9 +26,17 @@ body{
 }
 
 #carouselExampleIndicators {
-   background-color: black;
+   background-color: white;
    width: 400px;
    height: 500px;
    max-height: 500px;
    overflow: hidden;
+}
+
+.carousel-inner {
+   height: 100%;
+}
+
+.carousel-caption {
+   color: black;
 }
