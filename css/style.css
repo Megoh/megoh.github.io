@@ -14,6 +14,11 @@ body{
    }
 }
 
+.img-thumbnail {
+   width: 200px;
+   height: 200px;
+}
+
 #footer {
    width: 100%;
    position: absolute;
