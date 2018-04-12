@@ -28,8 +28,7 @@ body{
 #carouselExampleIndicators {
    background-color: white;
    width: 400px;
-   height: 500px;
-   max-height: 500px;
+   height: 600px;
    overflow: hidden;
 }
 
