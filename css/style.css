@@ -27,7 +27,6 @@ body{
 
 #carouselExampleIndicators {
    background-color: white;
-   width: 400px;
    height: 600px;
    overflow: hidden;
 }
@@ -41,9 +40,17 @@ body{
 }
 
 .carousel-control-prev {
+   height: 60px;
    background-color: darkgray;
 }
 
 .carousel-control-next {
+   height: 60px;
    background-color: darkgray;
+}
+
+.carousel-caption {
+   position: relative;
+   left: auto;
+   right: auto;
 }
