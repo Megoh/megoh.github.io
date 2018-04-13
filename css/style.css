@@ -29,6 +29,7 @@ body{
    background-color: white;
    height: 600px;
    overflow: hidden;
+   margin-left: 200px;
 }
 
 .carousel-inner {
@@ -42,6 +43,7 @@ body{
 .carousel-control-prev {
    height: 60px;
    background-color: darkgray;
+   margin-right: -200px;
 }
 
 .carousel-control-next {
