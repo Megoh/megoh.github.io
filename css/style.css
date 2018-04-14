@@ -29,7 +29,6 @@ body{
    background-color: white;
    height: 600px;
    overflow: hidden;
-   margin-left: 200px;
 }
 
 .carousel-inner {
@@ -40,19 +39,22 @@ body{
    color: black;
 }
 
-.carousel-control-prev {
-   height: 60px;
-   background-color: darkgray;
-   margin-right: -200px;
-}
-
-.carousel-control-next {
-   height: 60px;
-   background-color: darkgray;
-}
-
 .carousel-caption {
    position: relative;
    left: auto;
    right: auto;
+}
+
+.carousel-control-prev-icon {
+   background-image: url(../icons/package/build/svg/chevron-left.svg);
+   background-size: 100%;
+}
+.carousel-control-next-icon {
+   background-image: url(../icons/package/build/svg/chevron-right.svg);
+   background-size: 100%; 
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+   background-color: white;
 }
