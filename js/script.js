@@ -6,10 +6,10 @@ $(function () {
 })
 
 $(function () {
-   $(".carousel").mouseenter(function() {
+   $(".col").mouseenter(function() {
       $(".carousel-control-prev, .carousel-control-next").css("visibility", "visible");
    });
-   $(".carousel").mouseleave(function() {
+   $(".col").mouseleave(function() {
       $(".carousel-control-prev, .carousel-control-next").css("visibility", "hidden");
    });
 })

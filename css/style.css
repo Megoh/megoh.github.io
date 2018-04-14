@@ -32,6 +32,7 @@ body{
 
 .carousel-inner {
    height: 100%;
+   margin-right: 200px;
 }
 
 .carousel-caption {
@@ -55,9 +56,11 @@ body{
 
 .carousel-control-prev {
    background-color: white;
-   margin-left: -100px;
+   margin-left: -140px;
+   width: 130px;
 }
 .carousel-control-next {
    background-color: white;
-   margin-right: -100px;
+   margin-right: -140px;
+   width: 130px;
 }
