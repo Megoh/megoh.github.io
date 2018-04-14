@@ -28,7 +28,6 @@ body{
 #carouselExampleIndicators {
    background-color: white;
    height: 600px;
-   overflow: hidden;
 }
 
 .carousel-inner {
@@ -54,7 +53,11 @@ body{
    background-size: 100%; 
 }
 
-.carousel-control-prev, 
+.carousel-control-prev {
+   background-color: white;
+   margin-left: -100px;
+}
 .carousel-control-next {
    background-color: white;
+   margin-left: -100px;
 }
