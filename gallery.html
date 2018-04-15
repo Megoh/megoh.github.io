@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-   
+
    <head>
       <meta charset="utf-8">
+      <meta http-equiv="refresh" content="30">
       <title>Galeria</title>
+
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-	Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
       <link rel="stylesheet" type="text/css" href="css/style.css">
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+      <script src="js/script.js"></script>
    </head>
-   
+
    <body>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
          <div class="container">
             <a class="navbar-brand" href="#">Studio Benson</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+               <span class="navbar-toggler-icon"></span>
             </button>
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                <li class="nav-item">
@@ -31,46 +40,81 @@
             </ul>
          </div>
       </nav>
-      
+
       <div class="container my-4">
-         <div class="row text-center">
-            <div class="col">
-               <div class="gallery-img m-2" style="background-image: url(images/28471929_147670775927931_4442403161081734959_n.jpg)"></div>
-               <div class="gallery-img m-2" style="background-image: url(images/30180743_1661545313936475_1687095025_n.jpg)"></div>
-               <div class="gallery-img m-2" style="background-image: url(images/banner1.jpg)"></div>
-               <div class="gallery-img m-2" style="background-image: url(images/cborg%20small.jpg)"></div>
-               <div class="gallery-img m-2" style="background-image: url(images/cborg.jpg)"></div>
-               <div class="gallery-img m-2" style="background-image: url(images/crossfit%20jawor.jpg)"></div>
-               <div class="gallery-img m-2" style="background-image: url(images/devil%20energy.jpg)"></div>
-               <div class="gallery-img m-2" style="background-image: url(images/dompol.jpg)"></div>
-               <div class="gallery-img m-2" style="background-image: url(images/ekosolar.jpg)"></div>
-               <div class="gallery-img m-2" style="background-image: url(images/entrance.jpg)" ></div>
-               <div class="gallery-img m-2" style="background-image: url(images/fach.jpg)" ></div>
-               <div class="gallery-img m-2" style="background-image: url(images/fach2.jpg)" ></div>
-               <div class="gallery-img m-2" ></div>
-               <div class="gallery-img m-2" ></div>
-               <div class="gallery-img m-2" ></div>
-               <div class="gallery-img m-2" ></div>
-               <div class="gallery-img m-2" ></div>
-               <div class="gallery-img m-2" ></div>
-               <div class="gallery-img m-2" ></div>
-               <div class="gallery-img m-2" ></div>
-               <div class="gallery-img m-2" ></div>
-               <div class="gallery-img m-2" ></div>
-               <div class="gallery-img m-2" ></div>
-               <div class="gallery-img m-2" ></div>
-               <div class="gallery-img m-2" ></div>
+
+         <div class="container gallery-container">
+
+            <div class="tz-gallery">
+
+               <div class="row mb-3">
+                  <div class="col-md-4">
+                     <div class="card">
+                        <a class="lightbox" href="images/28471929_147670775927931_4442403161081734959_n.jpg">
+                           <img src="images/28471929_147670775927931_4442403161081734959_n.jpg" alt="Park" class="card-img-top">
+                        </a>
+                     </div>
+                  </div>
+
+                  <div class="col-md-4">
+                     <div class="card">
+                        <a class="lightbox" href="images/30180743_1661545313936475_1687095025_n.jpg">
+                           <img src="images/30180743_1661545313936475_1687095025_n.jpg" alt="Park" class="card-img-top">
+                        </a>
+                     </div>
+                  </div>
+
+                  <div class="col-md-4">
+                     <div class="card">
+                        <a class="lightbox" href="images/banner1.jpg">
+                           <img src="images/banner1.jpg" alt="Park" class="card-img-top">
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="row"> 
+                  <div class="col-md-4">
+                     <div class="card">
+                        <a class="lightbox" href="images/cborg%20small.jpg">
+                           <img src="images/cborg%20small.jpg" alt="Park" class="card-img-top">
+                        </a>
+                     </div>
+                  </div>
+
+                  <div class="col-md-4">
+                     <div class="card">
+                        <a class="lightbox" href="images/cborg.jpg">
+                           <img src="images/cborg.jpg" alt="Park" class="card-img-top">
+                        </a>
+                     </div>
+                  </div>
+
+                  <div class="col-md-4">
+                     <div class="card">
+                        <a class="lightbox" href="images/crossfit%20jawor.jpg">
+                           <img src="images/crossfit%20jawor.jpg" alt="Park" class="card-img-top">
+                        </a>
+                     </div>
+                  </div>
+
+               </div>
+
             </div>
+
          </div>
+
       </div>
-      
 
       <div id="footer" class="footer-copyright text-center">
          <div class="container-fluid text-white bg-dark py-2">
-           Copyright © Studio Benson 2018
+            Copyright © Studio Benson 2018
          </div>
       </div>
-     
-  </body>
-   
+
+      <script>
+         baguetteBox.run('.tz-gallery');
+      </script>
+
+   </body>
+
 </html>

@@ -13,3 +13,4 @@ $(function () {
       $(".carousel-control-prev, .carousel-control-next").css("visibility", "hidden");
    });
 })
+
