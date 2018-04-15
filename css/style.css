@@ -64,3 +64,15 @@ body{
    margin-right: -140px;
    width: 130px;
 }
+
+.gallery-img {
+   width: 250px;
+   height: 250px;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-color: lightgray;
+   display: inline-block;
+   border: 1px dashed grey;
+   border-radius: 3px;
+}
