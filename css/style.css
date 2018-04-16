@@ -80,3 +80,7 @@ body{
 a {
    text-align: center;
 }
+
+.card {
+   border-style: none;
+}
