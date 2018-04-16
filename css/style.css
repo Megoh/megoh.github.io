@@ -76,3 +76,7 @@ body{
    border: 1px dashed grey;
    border-radius: 3px;
 }
+
+a {
+   text-align: center;
+}
