@@ -77,10 +77,11 @@ body{
    border-radius: 3px;
 }
 
-a {
+#content-container a {
    text-align: center;
 }
 
 .card {
    border-style: none;
+   margin: auto;
 }

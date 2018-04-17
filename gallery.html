@@ -3,7 +3,8 @@
 
    <head>
       <meta charset="utf-8">
-      <meta http-equiv="refresh" content="30">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
       <title>Galeria</title>
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-	Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -18,42 +19,51 @@
    </head>
 
    <body>
+      
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
          <div class="container">
+            
             <a class="navbar-brand" href="#">Studio Benson</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
             </button>
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-               <li class="nav-item">
-                  <a class="nav-link" href="index.html">Strona główna<span class="sr-only">(current)</span></a>
-               </li>
-               <li class="nav-item active">
-                  <a class="nav-link" href="gallery.html">Galeria</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Kontakt</a>
-               </li>
-            </ul>
+
+            <div class="navbar-collapse collapse" id="navbarResponsive">
+            
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="index.html">Strona główna</a>
+                  </li>
+                  <li class="nav-item active">
+                     <a class="nav-link" href="gallery.html">Galeria<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact.html">Kontakt</a>
+                  </li>
+               </ul>
+               
+            </div>
+            
          </div>
       </nav>
 
-      <div class="container my-4">
+      <div id="content-container" class="container my-4">
 
          <div class="container gallery-container">
 
             <div class="tz-gallery">
 
                <div class="row my-3">
-                  <div class="col-md-3">
-                     <div class="card">
+                  <div class="col-md-6 col-lg-3 my-3">
+                     <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/28471929_147670775927931_4442403161081734959_n.jpg">
-                           <img src="images/28471929_147670775927931_4442403161081734959_n.jpg" alt="Park" class="card-img-top" style="max-height: 250px; width: auto; justify-content: center;">
+                           <img src="images/28471929_147670775927931_4442403161081734959_n.jpg" alt="Park" class="card-img-top" style="max-height: 250px; max-width: auto;">
                         </a>
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/30180743_1661545313936475_1687095025_n.jpg">
                            <img src="images/30180743_1661545313936475_1687095025_n.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -61,7 +71,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/banner1.jpg">
                            <img src="images/banner1.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -69,7 +79,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/cborg%20small.jpg">
                            <img src="images/cborg%20small.jpg" alt="Park" class="card-img-top" style="max-height: 250px; width: auto;">
@@ -79,7 +89,7 @@
                </div>
 
                <div class="row my-3"> 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/cborg.jpg">
                            <img src="images/cborg.jpg" alt="Park" class="card-img-top" style="max-height: 250px; width: auto;">
@@ -87,7 +97,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/crossfit%20jawor.jpg">
                            <img src="images/crossfit%20jawor.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -95,7 +105,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/devil%20energy.jpg">
                            <img src="images/devil%20energy.jpg" alt="Park" class="card-img-top" style="max-height: 250px; width: auto;">
@@ -103,7 +113,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/dompol.jpg">
                            <img src="images/dompol.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -111,9 +121,9 @@
                      </div>
                   </div>
                </div>
-               
+
                <div class="row my-3"> 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/ekosolar.jpg">
                            <img src="images/ekosolar.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -121,7 +131,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/entrance.jpg">
                            <img src="images/entrance.jpg" alt="Park" class="card-img-top" style="max-height: 250px; width: auto;">
@@ -129,7 +139,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/fach.jpg">
                            <img src="images/fach.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -137,7 +147,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/fach2.jpg">
                            <img src="images/fach2.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -145,9 +155,9 @@
                      </div>
                   </div>
                </div>
-               
+
                <div class="row my-3"> 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/fitway.jpg">
                            <img src="images/fitway.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -155,7 +165,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/franczak.jpg">
                            <img src="images/franczak.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -163,7 +173,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/grocery.jpg">
                            <img src="images/grocery.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -171,7 +181,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/kantor.jpg">
                            <img src="images/kantor.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -179,9 +189,9 @@
                      </div>
                   </div>
                </div>
-               
+
                <div class="row my-3"> 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/kinga%20serwis.jpg">
                            <img src="images/kinga%20serwis.jpg" alt="Park" class="card-img-top" style="max-height: 250px; width: auto;">
@@ -189,7 +199,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/lublin%20transportation%20small.jpg">
                            <img src="images/lublin%20transportation%20small.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -197,7 +207,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/lublin%20transportation.jpg">
                            <img src="images/lublin%20transportation.jpg" alt="Park" class="card-img-top" style="max-height: 250px; width: auto;">
@@ -205,7 +215,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/noobuser.jpg">
                            <img src="images/noobuser.jpg" alt="Park" class="card-img-top" style="max-height: 250px; width: auto;">
@@ -213,9 +223,9 @@
                      </div>
                   </div>
                </div>
-               
+
                <div class="row my-3"> 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/poltext.jpg">
                            <img src="images/poltext.jpg" alt="Park" class="card-img-top" style="max-height: 250px; width: auto;">
@@ -223,7 +233,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/primbud.jpg">
                            <img src="images/primbud.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -231,7 +241,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/sewage%20system%20cleaning.jpg">
                            <img src="images/sewage%20system%20cleaning.jpg" alt="Park" class="card-img-top" style="max-height: 250px; width: auto;">
@@ -239,21 +249,19 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/truck%20car%20wash.jpg">
                            <img src="images/truck%20car%20wash.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
                         </a>
                      </div>
                   </div>
-                  
+
                </div>
-               
+
                <div class="row my-3"> 
 
-                  
-
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/truck%20transport.jpg">
                            <img src="images/truck%20transport.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -261,7 +269,7 @@
                      </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6 col-lg-3 my-3">
                      <div class="card" style="max-width: 250px; max-height: 250px;">
                         <a class="lightbox" href="images/volvo.jpg">
                            <img src="images/volvo.jpg" alt="Park" class="card-img-top" style="max-width: 250px; height: auto;">
@@ -269,7 +277,7 @@
                      </div>
                   </div>
                </div>
-               
+
             </div>
 
          </div>
