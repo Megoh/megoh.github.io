@@ -3,6 +3,7 @@ body{
    position: relative;
    min-height: 100vh;
    padding-bottom: 120px;
+   max-width: 100vw;
 }
 
 @media(min-width: 992px){
@@ -28,11 +29,11 @@ body{
 #carouselExampleIndicators {
    background-color: white;
    height: 600px;
+   max-width: 50vw;
 }
 
 .carousel-inner {
    height: 100%;
-   margin-right: 200px;
 }
 
 .carousel-caption {
@@ -85,3 +86,4 @@ body{
    border-style: none;
    margin: auto;
 }
+
