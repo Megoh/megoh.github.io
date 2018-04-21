@@ -27,6 +27,8 @@ body{
 }
 
 #carouselExampleIndicators {
+   display: flex;
+   justify-content: center;
    background-color: white;
    height: 600px;
    max-width: 50vw;
@@ -34,13 +36,11 @@ body{
 
 .carousel-inner {
    height: 100%;
+   width: 80%;
 }
 
 .carousel-caption {
    color: black;
-}
-
-.carousel-caption {
    position: relative;
    left: auto;
    right: auto;
@@ -57,13 +57,13 @@ body{
 
 .carousel-control-prev {
    background-color: white;
-   margin-left: -140px;
-   width: 130px;
+   width: 10%;
+   height: 400px;
 }
 .carousel-control-next {
    background-color: white;
-   margin-right: -140px;
-   width: 130px;
+   width: 10%;
+   height: 400px;
 }
 
 .gallery-img {
@@ -93,5 +93,13 @@ h5 {
 
 address, p {
    font-family: serif;
+}
+
+.carousel-item img {
+   max-height: 400px;
+   max-width: 100%;
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
 }
 
