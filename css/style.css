@@ -66,6 +66,13 @@ body{
    height: 400px;
 }
 
+.carousel-caption {
+   color: black;
+   position: relative;
+   left: auto;
+   right: auto;
+}
+
 .gallery-img {
    width: 250px;
    height: 250px;
