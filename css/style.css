@@ -105,8 +105,6 @@ address, p {
 .carousel-item img {
    max-height: 400px;
    max-width: 100%;
-   display: inline-block;
    height: 100%;
-   vertical-align: middle;
 }
 
