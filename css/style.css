@@ -15,11 +15,6 @@ body{
    }
 }
 
-.img-thumbnail {
-   width: 200px;
-   height: 200px;
-}
-
 #footer {
    width: 100%;
    position: absolute;
@@ -32,6 +27,17 @@ body{
    background-color: white;
    height: 600px;
    max-width: 50vw;
+}
+
+#footer {
+   width: 100%;
+   position: absolute;
+   bottom: 0px;
+}
+
+.img-thumbnail {
+   width: 200px;
+   height: 200px;
 }
 
 .carousel-inner {
@@ -47,11 +53,11 @@ body{
 }
 
 .carousel-control-prev-icon {
-   background-image: url(../icons/package/build/svg/chevron-left.svg);
+   background-image: url(../images/chevron-left.png);
    background-size: 100%;
 }
 .carousel-control-next-icon {
-   background-image: url(../icons/package/build/svg/chevron-right.svg);
+   background-image: url(../images/chevron-right.png);
    background-size: 100%; 
 }
 
