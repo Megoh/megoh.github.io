@@ -79,18 +79,6 @@ body{
    right: auto;
 }
 
-.gallery-img {
-   width: 250px;
-   height: 250px;
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: center;
-   background-color: lightgray;
-   display: inline-block;
-   border: 1px dashed grey;
-   border-radius: 3px;
-}
-
 #content-container a {
    text-align: center;
 }
@@ -112,5 +100,9 @@ address, p {
    max-height: 400px;
    max-width: 100%;
    height: 100%;
+}
+
+.lightbox img {
+   border: 3px solid lightgray;
 }
 
