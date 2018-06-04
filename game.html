@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>the Clicker</title>
+      
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <script src="js/game.js"></script>
+   </head>
+   <body>
+      <p>RP earned: <span id="rp-earned">0</span> | RP per second: <span id="rp-persec"></span><br>
+      <button onclick="rpClick()">GET FREE RP</button></p>
+      <br>
+      <h3>Players: </h3>
+      Bronze players: <span id="bronzes">0</span><br>
+      <button onclick="bronze()">Invite a bronze player</button> Cost: <span id="bronzeCost">50</span> RP
+      <p>Silver players: <span id="silvers">0</span><br>
+      <button onclick="silver()">Invite a silver player</button> Cost: 100 RP</p>
+      <p>Gold players: <span id="golds">0</span><br>
+      <button onclick="gold()">Invite a gold player</button> Cost: 300 RP</p>
+      <p>Platinum players: <span id="platinums">0</span><br>
+      <button onclick="platinum()">Invite a platinum player</button> Cost: 1200 RP</p>
+      <p>Diamond players: <span id="diamonds">0</span><br>
+      <button onclick="diamond()">Invite a diamond player</button> Cost: 6000 RP</p>
+      <p>Master players: <span id="masters">0</span><br>
+      <button onclick="master()">Invite a master player</button> Cost: 36000 RP</p>
+      <p>Challenger players: <span id="challengers">0</span><br>
+      <button onclick="challenger()">Invite a challenger player</button> Cost: 252000 RP</p>
+   </body>
+</html>
