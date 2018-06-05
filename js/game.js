@@ -1,6 +1,7 @@
-var multiplier = 1.35;
+const multiplier = 1.35;
 
 var save = {
+   rpEarned: 0,
    rpPerSec: 0,
    bronzeCost: 50,
    silverCost: 100,
@@ -110,17 +111,22 @@ function challenger() {
       document.getElementById('challengerCost').innerHTML = prettify(parseInt(document.getElementById('challengerCost').innerHTML) * multiplier);
       save.challengerCost *= multiplier;
       save.challengers += 1;
-      alert('Congratulations! You won the game.');
+      
+      if (save.challengers == 1) {
+         alert('Congratulations! You won the game.');
+      }
    }
 }
 
 function saveGame() {
+   save.rpEarned = document.getElementById('rp-earned').innerHTML;
    localStorage.setItem("save",JSON.stringify(save));
 }
 
 function loadGame(){
    var load = JSON.parse(localStorage.getItem("save"));
 
+   save.rpEarned = load.rpEarned
    save.rpPerSec = load.rpPerSec;
    save.bronzes = load.bronzes;
    save.silvers = load.silvers;
@@ -137,6 +143,7 @@ function loadGame(){
    save.masterCost = load.masterCost;
    save.challengerCost = load.challengerCost;
 
+   document.getElementById('rp-earned').innerHTML = save.rpEarned;
    document.getElementById('rp-persec').innerHTML = save.rpPerSec;
    document.getElementById('bronzes').innerHTML = save.bronzes;
    document.getElementById('silvers').innerHTML = save.silvers;
