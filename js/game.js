@@ -110,6 +110,7 @@ function challenger() {
       document.getElementById('challengerCost').innerHTML = prettify(parseInt(document.getElementById('challengerCost').innerHTML) * multiplier);
       save.challengerCost *= multiplier;
       save.challeners += 1;
+      alert('Congratulions! You won the game.');
    }
 }
 
@@ -129,7 +130,7 @@ function loadGame(){
    save.bronzeCost = load.bronzeCost;
    save.silverCost = load.silverCost;
    save.goldCost = load.goldCost;
-   save.platinumCost = load.goldCost;
+   save.platinumCost = load.platinumCost;
    save.diamondCost = load.diamondCost;
    save.masterCost = load.masterCost;
    save.challengerCost = load.challengerCost;
