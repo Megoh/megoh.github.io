@@ -25,7 +25,7 @@ function prettify(input) {
 }
 
 function incrementByOne() {
-   document.getElementById("rp-earned").innerHTML = parseInt(document.getElementById('rp-earned').innerHTML) + 100;
+   document.getElementById("rp-earned").innerHTML = parseInt(document.getElementById('rp-earned').innerHTML) + 1;
 }
 
 function incrementInterval() {
@@ -112,7 +112,7 @@ function challenger() {
       document.getElementById('challengerCost').innerHTML = prettify(parseInt(document.getElementById('challengerCost').innerHTML) * multiplier);
       save.challengerCost *= multiplier;
       save.challengers += 1;
-      
+
       if (save.challengers == 1) {
          alert('Congratulations! You won the game.');
       }
