@@ -25,7 +25,7 @@ function prettify(input) {
 }
 
 function incrementByOne() {
-   document.getElementById("rp-earned").innerHTML = parseInt(document.getElementById('rp-earned').innerHTML) + 100000;
+   document.getElementById("rp-earned").innerHTML = parseInt(document.getElementById('rp-earned').innerHTML) + 1;
 }
 
 function incrementInterval() {
