@@ -25,7 +25,7 @@ function prettify(input) {
 }
 
 function incrementByOne() {
-   document.getElementById("rp-earned").innerHTML = parseInt(document.getElementById('rp-earned').innerHTML) + 1;
+   document.getElementById("rp-earned").innerHTML = parseInt(document.getElementById('rp-earned').innerHTML) + 555;
 }
 
 function incrementInterval() {
@@ -127,8 +127,8 @@ function saveGame() {
 function loadGame(){
    var load = JSON.parse(localStorage.getItem("save"));
 
-   save.rpEarned = load.rpEarned
-   save.rpPerSec = load.rpPerSec;
+   save.rpEarned = Math.trunc(load.rpEarned);
+   save.rpPerSec = Math.trunc(load.rpPerSec);
    save.bronzes = load.bronzes;
    save.silvers = load.silvers;
    save.golds = load.golds;
@@ -136,13 +136,13 @@ function loadGame(){
    save.diamonds = load.diamonds;
    save.masters = load.masters;
    save.challengers = load.challengers;
-   save.bronzeCost = load.bronzeCost;
-   save.silverCost = load.silverCost;
-   save.goldCost = load.goldCost;
-   save.platinumCost = load.platinumCost;
-   save.diamondCost = load.diamondCost;
-   save.masterCost = load.masterCost;
-   save.challengerCost = load.challengerCost;
+   save.bronzeCost = Math.trunc(load.bronzeCost);
+   save.silverCost = Math.trunc(load.silverCost);
+   save.goldCost = Math.trunc(load.goldCost);
+   save.platinumCost = Math.trunc(load.platinumCost);
+   save.diamondCost = Math.trunc(load.diamondCost);
+   save.masterCost = Math.trunc(load.masterCost);
+   save.challengerCost = Math.trunc(load.challengerCost);
 
    document.getElementById('rp-earned').innerHTML = save.rpEarned;
    document.getElementById('rp-persec').innerHTML = save.rpPerSec;
