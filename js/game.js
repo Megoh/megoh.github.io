@@ -24,7 +24,7 @@ function prettify(input) {
 }
 
 function incrementByOne() {
-   document.getElementById("rp-earned").innerHTML = parseInt(document.getElementById('rp-earned').innerHTML) + 1;
+   document.getElementById("rp-earned").innerHTML = parseInt(document.getElementById('rp-earned').innerHTML) + 100000;
 }
 
 function incrementInterval() {
@@ -109,8 +109,8 @@ function challenger() {
       document.getElementById('challengers').innerHTML = parseInt(document.getElementById('challengers').innerHTML) + 1;
       document.getElementById('challengerCost').innerHTML = prettify(parseInt(document.getElementById('challengerCost').innerHTML) * multiplier);
       save.challengerCost *= multiplier;
-      save.challeners += 1;
-      alert('Congratulions! You won the game.');
+      save.challengers += 1;
+      alert('Congratulations! You won the game.');
    }
 }
 
@@ -127,6 +127,8 @@ function loadGame(){
    save.golds = load.golds;
    save.platinums = load.platinums;
    save.diamonds = load.diamonds;
+   save.masters = load.masters;
+   save.challengers = load.challengers;
    save.bronzeCost = load.bronzeCost;
    save.silverCost = load.silverCost;
    save.goldCost = load.goldCost;
@@ -141,6 +143,8 @@ function loadGame(){
    document.getElementById('golds').innerHTML = save.golds;
    document.getElementById('platinums').innerHTML = save.platinums;
    document.getElementById('diamonds').innerHTML = save.diamonds;
+   document.getElementById('masters').innerHTML = save.masters;
+   document.getElementById('challengers').innerHTML = save.challengers;
    document.getElementById('bronzeCost').innerHTML = save.bronzeCost;
    document.getElementById('silverCost').innerHTML = save.silverCost;
    document.getElementById('goldCost').innerHTML = save.goldCost;
