@@ -168,6 +168,7 @@ function loadGame(){
 
    save.rpEarned = Math.trunc(load.rpEarned);
    save.rpPerSec = Math.trunc(load.rpPerSec);
+   save.rpPerClick = load.rpPerClick;
    save.bronzes = load.bronzes;
    save.silvers = load.silvers;
    save.golds = load.golds;
