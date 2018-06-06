@@ -177,8 +177,11 @@ function randomImage() {
    elem.style.top = Math.round(Math.random() * document.body.scrollHeight) + 'px';
 
    document.body.appendChild(elem);
+   var stolenRp = document.getElementById('rp-earned').innerHTML / 2;
+   document.getElementById('rp-earned').innerHTML = document.getElementById('rp-earned').innerHTML - stolenRp;
 }
 
 function removeBoris() {
    document.getElementById('abc').style.display = 'none';
+   document.getElementById('rp-earned').innerHTML = document.getElementById('rp-earned').innerHTML * 2;
 }
