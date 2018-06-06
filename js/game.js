@@ -185,3 +185,7 @@ function removeBoris() {
    document.getElementById('abc').style.display = 'none';
    document.getElementById('rp-earned').innerHTML = document.getElementById('rp-earned').innerHTML * 2;
 }
+
+window.onbeforeunload = function(e) {
+    saveGame();
+};
