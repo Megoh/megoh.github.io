@@ -171,7 +171,7 @@ function deleteGame() {
 function randomImage() {
    var elem = document.getElementById('abc');
    elem.style.position = 'absolute';
-   elem.style.visibility = 'visible';
+   elem.style.display = '';
 
    elem.style.left = '0';
    elem.style.top = Math.round(Math.random() * document.body.scrollHeight) + 'px';
@@ -183,5 +183,5 @@ function randomImage() {
 }
 
 function removeBoris() {
-   document.getElementById('abc').style.visibility = 'hidden';
+   document.getElementById('abc').style.display = 'none';
 }
