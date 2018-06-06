@@ -1,6 +1,7 @@
 .columns {
    display: flex;
    align-items: center;
+   visibility: hidden;
 }
 
 .columns img {
