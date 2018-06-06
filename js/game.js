@@ -3,6 +3,7 @@ const multiplier = 1.35;
 var save = {
    rpEarned: 0,
    rpPerSec: 0,
+   rpPerClick: 1,
    bronzeCost: 50,
    silverCost: 100,
    goldCost: 300,
@@ -25,7 +26,7 @@ function prettify(input) {
 }
 
 function incrementByOne() {
-   document.getElementById("rp-earned").innerHTML = parseInt(document.getElementById('rp-earned').innerHTML) + 1;
+   document.getElementById("rp-earned").innerHTML = parseInt(document.getElementById('rp-earned').innerHTML) + save.rpPerClick;
 }
 
 function incrementInterval() {
@@ -47,6 +48,7 @@ function bronze() {
       document.getElementById('bronzeCost').innerHTML = prettify(parseInt(document.getElementById('bronzeCost').innerHTML) * multiplier);
       save.bronzeCost *= multiplier;
       save.bronzes += 1;
+      save.rpPerClick += 1;
    }
 }
 
@@ -58,6 +60,7 @@ function silver() {
       document.getElementById('silverCost').innerHTML = prettify(parseInt(document.getElementById('silverCost').innerHTML) * multiplier);
       save.silverCost *= multiplier;
       save.silvers += 1;
+      save.rpPerClick += 1;
    }
 }
 
@@ -69,6 +72,7 @@ function gold() {
       document.getElementById('goldCost').innerHTML = prettify(parseInt(document.getElementById('goldCost').innerHTML) * multiplier);
       save.goldCost *= multiplier;
       save.golds += 1;
+      save.rpPerClick += 1;
    }
 }
 
@@ -80,6 +84,7 @@ function platinum() {
       document.getElementById('platinumCost').innerHTML = prettify(parseInt(document.getElementById('platinumCost').innerHTML) * multiplier);
       save.platinumCost *= multiplier;
       save.platinums += 1;
+      save.rpPerClick += 1;
    }
 }
 
@@ -91,6 +96,7 @@ function diamond() {
       document.getElementById('diamondCost').innerHTML = prettify(parseInt(document.getElementById('diamondCost').innerHTML) * multiplier);
       save.diamondCost *= multiplier;
       save.diamonds += 1;
+      save.rpPerClick += 1;
    }
 }
 
@@ -102,6 +108,7 @@ function master() {
       document.getElementById('masterCost').innerHTML = prettify(parseInt(document.getElementById('masterCost').innerHTML) * multiplier);
       save.masterCost *= multiplier;
       save.masters += 1;
+      save.rpPerClick += 1;
    }
 }
 
@@ -113,6 +120,7 @@ function challenger() {
       document.getElementById('challengerCost').innerHTML = prettify(parseInt(document.getElementById('challengerCost').innerHTML) * multiplier);
       save.challengerCost *= multiplier;
       save.challengers += 1;
+      save.rpPerClick += 1;
 
       if (save.challengers == 1) {
          alert('Congratulations! You won the game.');
