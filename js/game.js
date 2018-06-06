@@ -36,7 +36,7 @@ function incrementInterval() {
 window.onload = function () {
    setInterval(incrementInterval, 1000);
    setInterval(saveGame, 30000);
-   setInterval(randomImage, 15000);
+   setInterval(randomImage, 180000);
 };
 
 function bronze() {
