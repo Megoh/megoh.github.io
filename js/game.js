@@ -36,7 +36,7 @@ function incrementInterval() {
 window.onload = function () {
    setInterval(incrementInterval, 1000);
    setInterval(saveGame, 30000);
-   setInterval(randomImage, 30000);
+   setInterval(randomImage, 15000);
 };
 
 function bronze() {
@@ -173,10 +173,7 @@ function randomImage() {
    elem.style.position = 'absolute';
    elem.style.display = '';
 
-   elem.style.left = '0';
-   elem.style.top = Math.round(Math.random() * document.body.scrollHeight) + 'px';
-
-   elem.style.right = '0';
+   elem.style.left = Math.round(Math.random() * document.body.scrollWidth) + 'px';
    elem.style.top = Math.round(Math.random() * document.body.scrollHeight) + 'px';
 
    document.body.appendChild(elem);
