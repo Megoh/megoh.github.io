@@ -36,6 +36,7 @@ function incrementInterval() {
 window.onload = function () {
    setInterval(incrementInterval, 1000);
    setInterval(saveGame, 30000);
+   setInterval(randomImage, 5000);
 };
 
 function bronze() {
@@ -161,4 +162,26 @@ function loadGame(){
    document.getElementById('masterCost').innerHTML = save.masterCost;
    document.getElementById('challengerCost').innerHTML = save.challengerCost;
 
+}
+
+function deleteGame() {
+   localStorage.removeItem('save');
+}
+
+function randomImage() {
+   var elem = document.getElementById('abc');
+   elem.style.position = 'absolute';
+   elem.style.visibility = 'visible';
+
+   elem.style.left = '0';
+   elem.style.top = Math.round(Math.random() * document.body.scrollHeight) + 'px';
+
+   elem.style.right = '0';
+   elem.style.top = Math.round(Math.random() * document.body.scrollHeight) + 'px';
+
+   document.body.appendChild(elem);
+}
+
+function removeBoris() {
+   document.getElementById('abc').style.visibility = 'hidden';
 }

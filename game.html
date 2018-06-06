@@ -13,7 +13,7 @@
    </head>
    <body>
       <p>RP earned: <span id="rp-earned">0</span> | RP per second: <span id="rp-persec"></span><br>
-         <a class="button" onclick="incrementByOne()">GET FREE RP</a><a class="button" onclick="saveGame()">Save</a><a class="button" onclick="loadGame()">Load</a></p>
+         <a class="button" onclick="incrementByOne()">GET FREE RP</a><a class="button" onclick="saveGame()">Save</a><a class="button" onclick="loadGame()">Load</a><a class="button" onclick="deleteGame()">Delete</a></p>
 
       <br>
 
@@ -60,6 +60,8 @@
          <div class="column">Challenger players: <span id="challengers">0</span><br>
             <a class="button" onclick="challenger()">Invite a challenger player</a> Cost: <span id="challengerCost">252000</span> RP<br></div>
       </div>
-
+      
+      <img id="abc" src="img/boris_naked.png" width="100px" height="100px" onclick="removeBoris()">
+      
    </body>
 </html>
