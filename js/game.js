@@ -65,7 +65,7 @@ function incrementInterval() {
 }
 
 window.onload = function () {
-   loadGame();
+
    setInterval(incrementInterval, 1000);
    setInterval(saveGame, 300000);
    setInterval(randomImage, 180000);
@@ -206,6 +206,22 @@ function loadGame(){
 
 function deleteGame() {
    localStorage.removeItem('save');
+   document.getElementById('rp-earned').innerHTML = '0';
+   document.getElementById('rp-persec').innerHTML = '0';
+   document.getElementById('bronzes').innerHTML = '0';
+   document.getElementById('silvers').innerHTML = '0';
+   document.getElementById('golds').innerHTML = '0';
+   document.getElementById('platinums').innerHTML = '0';
+   document.getElementById('diamonds').innerHTML = '0';
+   document.getElementById('masters').innerHTML = '0';
+   document.getElementById('challengers').innerHTML = '0';
+   document.getElementById('bronzeCost').innerHTML = '50';
+   document.getElementById('silverCost').innerHTML = '100';
+   document.getElementById('goldCost').innerHTML = '300';
+   document.getElementById('platinumCost').innerHTML = '1200';
+   document.getElementById('diamondCost').innerHTML = '6000';
+   document.getElementById('masterCost').innerHTML = '36000';
+   document.getElementById('challengerCost').innerHTML = '252000';
 }
 
 function randomImage() {
