@@ -1,3 +1,6 @@
+body {
+   margin: 15px;
+}
 .columns {
    display: flex;
    align-items: center;
