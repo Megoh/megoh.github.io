@@ -66,7 +66,7 @@ function incrementInterval() {
 
 window.onload = function () {
    setInterval(incrementInterval, 1000);
-   setInterval(saveGame, 30000);
+   setInterval(saveGame, 300000);
    setInterval(randomImage, 180000);
 };
 
@@ -218,6 +218,7 @@ function randomImage() {
    document.body.appendChild(elem);
    var stolenRp = document.getElementById('rp-earned').innerHTML / 2;
    document.getElementById('rp-earned').innerHTML = document.getElementById('rp-earned').innerHTML - stolenRp;
+   setTimeout(removeBoris, 10000)
 }
 
 function removeBoris() {

@@ -1,6 +1,7 @@
 body {
    margin: 15px;
 }
+
 .columns {
    display: flex;
    align-items: center;
@@ -10,3 +11,4 @@ body {
 .columns img {
    height: 60px;
 }
+
