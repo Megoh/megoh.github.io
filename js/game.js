@@ -65,10 +65,9 @@ function incrementInterval() {
 }
 
 window.onload = function () {
-
    setInterval(incrementInterval, 1000);
    setInterval(saveGame, 300000);
-   setInterval(randomImage, 180000);
+   setInterval(randomImage, 120000);
 };
 
 function bronze() {
@@ -224,6 +223,35 @@ function deleteGame() {
    document.getElementById('challengerCost').innerHTML = '252000';
 }
 
+function removeBoris() {
+   document.getElementById('abc').style.display = 'none';
+   document.getElementById('rp-earned').innerHTML = document.getElementById('rp-earned').innerHTML * 2;
+}
+
+function lowerOpacityOfBoris() {
+   document.getElementById('abc').style.opacity = (parseInt(document.getElementById('abc').style.opacity) - 0.01).toString();
+}
+
+function fadeBoris() {
+   var target = document.getElementById("abc");
+   var fadeEffect = setInterval(function () {
+      if (!target.style.opacity) {
+         target.style.opacity = 1;
+      }
+      if (target.style.opacity > 0) {
+         target.style.opacity -= 0.01;
+      } else {
+         target.style.display = 'none';
+         target.style.opacity = 1;
+         clearInterval(fadeEffect);
+      }
+   }, 30);
+}
+
+window.onbeforeunload = function(e) {
+   saveGame();
+};
+
 function randomImage() {
    var elem = document.getElementById('abc');
    elem.style.position = 'absolute';
@@ -235,14 +263,5 @@ function randomImage() {
    document.body.appendChild(elem);
    var stolenRp = document.getElementById('rp-earned').innerHTML / 2;
    document.getElementById('rp-earned').innerHTML = document.getElementById('rp-earned').innerHTML - stolenRp;
-   setTimeout(removeBoris, 10000)
+   setTimeout(fadeBoris, 13000);
 }
-
-function removeBoris() {
-   document.getElementById('abc').style.display = 'none';
-   document.getElementById('rp-earned').innerHTML = document.getElementById('rp-earned').innerHTML * 2;
-}
-
-window.onbeforeunload = function(e) {
-   saveGame();
-};
