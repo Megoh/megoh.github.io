@@ -35,31 +35,27 @@ function incrementInterval() {
 
    document.getElementById('bronzeColumns').style.visibility = 'visible';
 
-   if (document.getElementById('rp-earned').innerHTML >= save.silverCost) {
+   if (document.getElementById('rp-earned').innerHTML >= save.bronzeCost) {
       document.getElementById('silverColumns').style.visibility = 'visible';
    }
 
-   if (document.getElementById('rp-earned').innerHTML >= save.goldCost) {
+   if (document.getElementById('rp-earned').innerHTML >= save.silverCost) {
       document.getElementById('goldColumns').style.visibility = 'visible';
    }
 
    if (document.getElementById('rp-earned').innerHTML >= save.goldCost) {
-      document.getElementById('goldColumns').style.visibility = 'visible';
-   }
-
-   if (document.getElementById('rp-earned').innerHTML >= save.platinumCost) {
       document.getElementById('platinumColumns').style.visibility = 'visible';
    }
 
-   if (document.getElementById('rp-earned').innerHTML >= save.diamondCost) {
+   if (document.getElementById('rp-earned').innerHTML >= save.platinumCost) {
       document.getElementById('diamondColumns').style.visibility = 'visible';
    }
 
-   if (document.getElementById('rp-earned').innerHTML >= save.masterCost) {
+   if (document.getElementById('rp-earned').innerHTML >= save.diamondCost) {
       document.getElementById('masterColumns').style.visibility = 'visible';
    }
 
-   if (document.getElementById('rp-earned').innerHTML >= save.challengerCost) {
+   if (document.getElementById('rp-earned').innerHTML >= save.masterCost) {
       document.getElementById('challengerColumns').style.visibility = 'visible';
    }
 }
