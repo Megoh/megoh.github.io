@@ -1,6 +1,6 @@
 const multiplier = 1.35;
 
-var base = {
+const base = {
    bronzeCost: 50,
    silverCost: 100,
    goldCost: 300,
@@ -46,24 +46,24 @@ function incrementInterval() {
    document.getElementById('bronzeColumns').style.visibility = 'visible';
 
    if (document.getElementById('rp-earned').innerHTML >= base.bronzeCost) {
-      
+
       document.getElementById('silverColumns').style.visibility = 'visible';
    }
    if (document.getElementById('rp-earned').innerHTML >= save.bronzeCost) {
-         document.getElementById('bronzeButton').className = 'button is-small is-success';
-      }
+      document.getElementById('bronzeButton').className = 'button is-small is-success';
+   }
 
    else if (document.getElementById('rp-earned').innerHTML < save.bronzeCost) {
       document.getElementById('bronzeButton').className = 'button is-small is-light';
    }
 
    if (document.getElementById('rp-earned').innerHTML >= base.silverCost) {
-      
+
       document.getElementById('goldColumns').style.visibility = 'visible';
    }
    if (document.getElementById('rp-earned').innerHTML >= save.silverCost) {
-         document.getElementById('silverButton').className = 'button is-small is-success';
-      }
+      document.getElementById('silverButton').className = 'button is-small is-success';
+   }
 
    else if (document.getElementById('rp-earned').innerHTML < save.silverCost) {
       document.getElementById('silverButton').className = 'button is-small is-light';
@@ -82,38 +82,37 @@ function incrementInterval() {
    }
 
    if (document.getElementById('rp-earned').innerHTML >= base.platinumCost) {
-      
+
       document.getElementById('diamondColumns').style.visibility = 'visible';
    }
    if (document.getElementById('rp-earned').innerHTML >= save.platinumCost) {
-         document.getElementById('platinumButton').className = 'button is-small is-success';
-      }
+      document.getElementById('platinumButton').className = 'button is-small is-success';
+   }
 
    else if (document.getElementById('rp-earned').innerHTML < save.platinumCost) {
       document.getElementById('platinumButton').className = 'button is-small is-light';
    }
 
    if (document.getElementById('rp-earned').innerHTML >= base.diamondCost) {
-      
+
       document.getElementById('masterColumns').style.visibility = 'visible';
    }
 
    if (document.getElementById('rp-earned').innerHTML >= save.diamondCost) {
-         document.getElementById('diamondButton').className = 'button is-small is-success';
-      }
-   
+      document.getElementById('diamondButton').className = 'button is-small is-success';
+   }
+
    else if (document.getElementById('rp-earned').innerHTML < save.diamondCost) {
       document.getElementById('diamondButton').className = 'button is-small is-light';
    }
 
    if (document.getElementById('rp-earned').innerHTML >= base.masterCost) {
-      
       document.getElementById('challengerColumns').style.visibility = 'visible';
    }
-   
+
    if (document.getElementById('rp-earned').innerHTML >= save.masterCost) {
-         document.getElementById('masterButton').className = 'button is-small is-success';
-      }
+      document.getElementById('masterButton').className = 'button is-small is-success';
+   }
 
    else if (document.getElementById('rp-earned').innerHTML < save.masterCost) {
       document.getElementById('masterButton').className = 'button is-small is-light';
