@@ -336,8 +336,8 @@ function randomImage() {
    elem.style.position = 'absolute';
    elem.style.display = '';
 
-   elem.style.left = Math.round(Math.random() * document.body.scrollWidth) + 'px';
-   elem.style.top = Math.round(Math.random() * document.body.scrollHeight) + 'px';
+   elem.style.left = 75 + Math.round(Math.random() * (document.body.scrollWidth - 200)) + 'px';
+   elem.style.top = 75 + Math.round(Math.random() * (document.body.scrollHeight - 150)) + 'px';
 
    document.body.appendChild(elem);
    var stolenRp = document.getElementById('rp-earned').innerHTML / 2;

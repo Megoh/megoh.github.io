@@ -12,3 +12,8 @@ body {
    height: 60px;
 }
 
+.columns img:hover {
+   height: 60px;
+   cursor: pointer;
+}
+
