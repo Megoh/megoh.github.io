@@ -46,7 +46,6 @@ function incrementInterval() {
    document.getElementById('bronzeColumns').style.visibility = 'visible';
 
    if (document.getElementById('rp-earned').innerHTML >= base.bronzeCost) {
-
       document.getElementById('silverColumns').style.visibility = 'visible';
    }
    if (document.getElementById('rp-earned').innerHTML >= save.bronzeCost) {
@@ -58,7 +57,6 @@ function incrementInterval() {
    }
 
    if (document.getElementById('rp-earned').innerHTML >= base.silverCost) {
-
       document.getElementById('goldColumns').style.visibility = 'visible';
    }
    if (document.getElementById('rp-earned').innerHTML >= save.silverCost) {
@@ -82,7 +80,6 @@ function incrementInterval() {
    }
 
    if (document.getElementById('rp-earned').innerHTML >= base.platinumCost) {
-
       document.getElementById('diamondColumns').style.visibility = 'visible';
    }
    if (document.getElementById('rp-earned').innerHTML >= save.platinumCost) {
@@ -94,7 +91,6 @@ function incrementInterval() {
    }
 
    if (document.getElementById('rp-earned').innerHTML >= base.diamondCost) {
-
       document.getElementById('masterColumns').style.visibility = 'visible';
    }
 
@@ -268,6 +264,7 @@ function loadGame(){
 
 function deleteGame() {
    localStorage.removeItem('save');
+
    document.getElementById('rp-earned').innerHTML = '0';
    document.getElementById('rp-persec').innerHTML = '0';
    document.getElementById('bronzes').innerHTML = '0';
@@ -284,6 +281,24 @@ function deleteGame() {
    document.getElementById('diamondCost').innerHTML = '6000';
    document.getElementById('masterCost').innerHTML = '36000';
    document.getElementById('challengerCost').innerHTML = '252000';
+
+   save.rpPerClick = 1;
+   save.rpEarned = parseInt(document.getElementById('rp-earned').innerHTML);
+   save.rpPerSec = parseInt(document.getElementById('rp-persec').innerHTML);
+   save.bronzes = parseInt(document.getElementById('bronzes').innerHTML);
+   save.silvers = parseInt(document.getElementById('silvers').innerHTML);
+   save.golds = parseInt(document.getElementById('golds').innerHTML);
+   save.platinums = parseInt(document.getElementById('platinums').innerHTML);
+   save.diamonds = parseInt(document.getElementById('diamonds').innerHTML);
+   save.masters = parseInt(document.getElementById('masters').innerHTML);
+   save.challengers = parseInt(document.getElementById('challengers').innerHTML);
+   save.bronzeCost = parseInt(document.getElementById('bronzeCost').innerHTML);
+   save.silverCost = parseInt(document.getElementById('silverCost').innerHTML);
+   save.goldCost = parseInt(document.getElementById('goldCost').innerHTML);
+   save.platinumCost = parseInt(document.getElementById('platinumCost').innerHTML);
+   save.diamondCost = parseInt(document.getElementById('diamondCost').innerHTML);
+   save.masterCost = parseInt(document.getElementById('masterCost').innerHTML);
+   save.challengerCost = parseInt(document.getElementById('challengerCost').innerHTML);
 }
 
 function removeBoris() {
