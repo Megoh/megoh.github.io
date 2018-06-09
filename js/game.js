@@ -30,6 +30,21 @@ var save = {
    challengers: 0
 };
 
+function randomImage() {
+   var elem = document.getElementById('abc');
+   elem.style.position = 'absolute';
+   elem.style.display = '';
+
+   elem.style.left = 75 + Math.round(Math.random() * (document.body.scrollWidth - 200)) + 'px';
+   elem.style.top = 75 + Math.round(Math.random() * (document.body.scrollHeight - 150)) + 'px';
+
+   document.body.appendChild(elem);
+   var stolenRp = document.getElementById('rp-earned').innerHTML / 2;
+   document.getElementById('rp-earned').innerHTML = document.getElementById('rp-earned').innerHTML - stolenRp;
+   setTimeout(fadeBoris, 13000);
+   setTimeout(randomImage, 30000 + Math.random() * 60000);
+}
+
 function prettify(input) {
    var output = Math.trunc(input);
    return output;
@@ -127,7 +142,7 @@ window.onload = function () {
    loadGame();
    setInterval(incrementInterval, 1000);
    setInterval(saveGame, 300000);
-   setInterval(randomImage, 120000);
+   setTimeout(randomImage, 30000 + Math.random() * 60000);
 };
 
 function bronze() {
@@ -330,17 +345,3 @@ function fadeBoris() {
 window.onbeforeunload = function(e) {
    saveGame();
 };
-
-function randomImage() {
-   var elem = document.getElementById('abc');
-   elem.style.position = 'absolute';
-   elem.style.display = '';
-
-   elem.style.left = 75 + Math.round(Math.random() * (document.body.scrollWidth - 200)) + 'px';
-   elem.style.top = 75 + Math.round(Math.random() * (document.body.scrollHeight - 150)) + 'px';
-
-   document.body.appendChild(elem);
-   var stolenRp = document.getElementById('rp-earned').innerHTML / 2;
-   document.getElementById('rp-earned').innerHTML = document.getElementById('rp-earned').innerHTML - stolenRp;
-   setTimeout(fadeBoris, 13000);
-}
