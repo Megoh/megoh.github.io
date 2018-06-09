@@ -124,6 +124,7 @@ function incrementInterval() {
 }
 
 window.onload = function () {
+   loadGame();
    setInterval(incrementInterval, 1000);
    setInterval(saveGame, 300000);
    setInterval(randomImage, 120000);
