@@ -30,6 +30,15 @@ var save = {
    challengers: 0
 };
 
+
+function increaseRpButton() {
+   document.getElementById('rpButton').className = 'button is-warning is-rounded';
+}
+
+function decreaseRpButton() {
+   document.getElementById('rpButton').className = 'button is-warning is-small is-rounded';
+}
+
 function randomImage() {
    var elem = document.getElementById('abc');
    elem.style.position = 'absolute';

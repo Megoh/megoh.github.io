@@ -13,23 +13,14 @@
       <script src="js/game.js"></script>
    </head>
    <body>
-      RP earned: <span id="rp-earned">0</span> | RP per second: <span id="rp-persec"></span><br><br>
-      <div class="field is-grouped">
-         <p class="control">
-            <a class="button is-warning is-small is-rounded" onclick="incrementByOne()">GET FREE RP</a>
-         </p>
-         <p class="control">
-            <a class="button is-small is-rounded" onclick="saveGame()">Save</a>
-         </p>
-         <p class="control">
-            <a class="button is-small is-rounded" onclick="loadGame()">Load</a>
-         </p>
-         <p class="control">
-            <a class="button is-danger is-small is-rounded" onclick="deleteGame()">Delete</a>
-         </p>
+      RP earned: <span id="rp-earned">0</span> | RP per second: <span id="rp-persec"></span>
+
+      <div class="rpButton"><a class="button is-warning is-rounded" id="rpButton" onmouseleave="increaseRpButton()" onmouseup="increaseRpButton()" onmousedown="decreaseRpButton()" onclick="incrementByOne()">GET FREE RP</a>
       </div>
 
-      <br>
+      <div class="deleteButton">
+         <a class="button is-danger is-small is-rounded" onclick="deleteGame()">Reset</a>
+      </div>
 
       <h5 class="title is-5">Players </h5>
 

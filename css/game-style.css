@@ -28,3 +28,29 @@ body {
    cursor: pointer;
 }
 
+.button {
+   /*margin-right: 5px; */
+}
+
+.control {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.rpButton {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 40px;
+   width: 200px;
+}
+
+.deleteButton {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 40px;
+   width: 200px;
+}
+
