@@ -327,6 +327,13 @@ function deleteGame() {
       save.diamondCost = parseInt(document.getElementById('diamondCost').innerHTML);
       save.masterCost = parseInt(document.getElementById('masterCost').innerHTML);
       save.challengerCost = parseInt(document.getElementById('challengerCost').innerHTML);
+      
+      document.getElementById('silverColumns').style.visibility = 'hidden';
+      document.getElementById('goldColumns').style.visibility = 'hidden';
+      document.getElementById('platinumColumns').style.visibility = 'hidden';
+      document.getElementById('diamondColumns').style.visibility = 'hidden';
+      document.getElementById('masterColumns').style.visibility = 'hidden';
+      document.getElementById('challengerColumns').style.visibility = 'hidden';
    }
 }
 
