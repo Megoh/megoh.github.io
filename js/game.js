@@ -34,11 +34,11 @@ var save = {
 
 
 function increaseRpButton() {
-   document.getElementById('rpButton').className = 'button is-warning is-rounded';
+   document.getElementById('rpButton').className = 'button is-warning is-medium is-rounded';
 }
 
 function decreaseRpButton() {
-   document.getElementById('rpButton').className = 'button is-warning is-small is-rounded';
+   document.getElementById('rpButton').className = 'button is-warning is-rounded';
 }
 
 function randomImage() {

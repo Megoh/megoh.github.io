@@ -14,7 +14,7 @@
    </head>
    <body>
       <div class="columns">
-         <div class="column is-one-third">
+         <div class="column is-two-fifths">
             <h5 class="title is-5">Players</h5>
 
             <div id="bronzeColumns" class="columns is-size-7">
@@ -82,16 +82,16 @@
          </div>
 
          <div id="rpColumn" class="column">
-            <div id="rpDiv">
+            <div id="rpDiv" class="is-size-6">
                <div>RP earned: <span id="rp-earned">0</span></div>
                <div>RP per second: <span id="rp-persec"></span></div>
 
                <div class="rpButton">
-                  <a class="button is-warning is-rounded" id="rpButton" onmouseleave="increaseRpButton()" onmouseup="increaseRpButton()" onmousedown="decreaseRpButton()" onclick="incrementByOne()">GET FREE RP</a>
+                  <a class="button is-warning is-medium is-rounded" id="rpButton" onmouseleave="increaseRpButton()" onmouseup="increaseRpButton()" onmousedown="decreaseRpButton()" onclick="incrementByOne()">GET FREE RP</a>
                </div>
 
                <div class="deleteButton">
-                  <a class="button is-danger is-small is-rounded" onclick="deleteGame()">Reset</a>
+                  <a class="button is-danger is-rounded" onclick="deleteGame()">Reset</a>
                </div>
             </div>
          </div>
