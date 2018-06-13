@@ -69,8 +69,6 @@ function incrementInterval() {
    document.getElementById('rp-earned').innerHTML = prettify(parseInt(document.getElementById('rp-earned').innerHTML) + save.rpPerSec);
    document.getElementById('rp-persec').innerHTML = prettify(save.rpPerSec);
 
-   document.getElementById('bronzeColumns').style.visibility = 'visible';
-
    if (document.getElementById('rp-earned').innerHTML >= base.bronzeCost) {
       document.getElementById('silverColumns').style.visibility = 'visible';
    }

@@ -13,7 +13,7 @@ h5 {
    justify-content: center;
 }
 
-#bronzeColumns, #silverColumns, #goldColumns, #platinumColumns, #diamondColumns, #masterColumns, #challengerColumns {
+#silverColumns, #goldColumns, #platinumColumns, #diamondColumns, #masterColumns, #challengerColumns {
    display: flex;
    align-items: center;
    visibility: hidden;
