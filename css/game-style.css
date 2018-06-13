@@ -8,10 +8,21 @@ body {
    height: 95px;
 }
 
-.columns {
+h5 {
+   display: flex;
+   justify-content: center;
+}
+
+#bronzeColumns, #silverColumns, #goldColumns, #platinumColumns, #diamondColumns, #masterColumns, #challengerColumns {
    display: flex;
    align-items: center;
    visibility: hidden;
+}
+
+#rpColumn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .columns img {
@@ -26,10 +37,6 @@ body {
 .columns img:active {
    height: 60px;
    cursor: pointer;
-}
-
-.button {
-   /*margin-right: 5px; */
 }
 
 .control {
@@ -52,5 +59,12 @@ body {
    justify-content: center;
    height: 40px;
    width: 200px;
+}
+
+#rpDiv {
+   width: 350px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
 }
 

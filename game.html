@@ -13,57 +13,90 @@
       <script src="js/game.js"></script>
    </head>
    <body>
-      RP earned: <span id="rp-earned">0</span> | RP per second: <span id="rp-persec"></span>
+      <div class="columns">
+         <div class="column is-one-third">
+            <h5 class="title is-5">Players</h5>
 
-      <div class="rpButton"><a class="button is-warning is-rounded" id="rpButton" onmouseleave="increaseRpButton()" onmouseup="increaseRpButton()" onmousedown="decreaseRpButton()" onclick="incrementByOne()">GET FREE RP</a>
-      </div>
+            <div id="bronzeColumns" class="columns is-size-7">
+               <div class="league column is-flex"><img src="img/bronze.png" onclick="bronze()"></div>
+               <div class="column">
+                  <div>Bronze players: <span id="bronzes">0</span></div>
+                  <div><a id="bronzeButton" class="button is-small is-light" onclick="bronze()">Invite a bronze player</a></div>
+                  <div>Cost: <span id="bronzeCost">50</span> RP</div>
+               </div>
+            </div>
 
-      <div class="deleteButton">
-         <a class="button is-danger is-small is-rounded" onclick="deleteGame()">Reset</a>
-      </div>
+            <div id="silverColumns" class="columns is-size-7">
+               <div class="league column is-flex"><img src="img/silver.png" onclick="silver()"></div>
+               <div class="column">
+                  <div>Silver players: <span id="silvers">0</span></div>
+                  <div><a id="silverButton" class="button is-small is-light" onclick="silver()">Invite a silver player</a></div>
+                  <div>Cost: <span id="silverCost">100</span> RP</div>
+               </div>
+            </div>
 
-      <h5 class="title is-5">Players </h5>
+            <div id="goldColumns"  class="columns is-size-7">
+               <div class="league column is-flex"><img src="img/gold.png" onclick="gold()"></div>
+               <div class="column">
+                  <div>Gold players: <span id="golds">0</span></div>
+                  <div><a id="goldButton" class="button is-small is-light" onclick="gold()">Invite a gold player</a></div>
+                  <div>Cost: <span id="goldCost">300</span> RP</div>
+               </div>
+            </div>
 
-      <div id="bronzeColumns" class="columns is-size-7">
-         <div class="league column is-1 is-flex"><img src="img/bronze.png" onclick="bronze()"></div>
-         <div class="column">Bronze players: <span id="bronzes">0</span><br>
-            <a id="bronzeButton" class="button is-small is-light" onclick="bronze()">Invite a bronze player</a> Cost: <span id="bronzeCost">50</span> RP<br></div>
-      </div>
+            <div id="platinumColumns"  class="columns is-size-7">
+               <div class="league column is-flex"><img src="img/platinum.png" onclick="platinum()"></div>
+               <div class="column">
+                  <div>Platinum players: <span id="platinums">0</span></div>
+                  <div><a id="platinumButton" class="button is-small is-light" onclick="platinum()">Invite a platinum player</a></div>
+                  <div>Cost: <span id="platinumCost">1200</span> RP</div>
+               </div>
+            </div>
 
-      <div id="silverColumns" class="columns is-size-7">
-         <div class="league column is-1 is-flex"><img src="img/silver.png" onclick="silver()"></div>
-         <div class="column">Silver players: <span id="silvers">0</span><br>
-            <a id="silverButton" class="button is-small is-light" onclick="silver()">Invite a silver player</a> Cost: <span id="silverCost">100</span> RP<br></div>
-      </div>
+            <div id="diamondColumns"  class="columns is-size-7">
+               <div class="league column is-flex"><img src="img/diamond.png" onclick="diamond()"></div>
+               <div class="column">
+                  <div>Diamond players: <span id="diamonds">0</span></div>
+                  <div><a id="diamondButton" class="button is-small is-light" onclick="diamond()">Invite a diamond player</a></div>
+                  <div>Cost: <span id="diamondCost">6000</span> RP</div>
+               </div>
+            </div>
 
-      <div id="goldColumns"  class="columns is-size-7">
-         <div class="league column is-1 is-flex"><img src="img/gold.png" onclick="gold()"></div>
-         <div class="column">Gold players: <span id="golds">0</span><br>
-            <a id="goldButton" class="button is-small is-light" onclick="gold()">Invite a gold player</a> Cost: <span id="goldCost">300</span> RP<br></div>
-      </div>
+            <div id="masterColumns"  class="columns is-size-7">
+               <div class="league column is-flex"><img src="img/master.png" onclick="master()"></div>
+               <div class="column">
+                  <div>Master players: <span id="masters">0</span></div>
+                  <div><a id="masterButton" class="button is-small is-light" onclick="master()">Invite a master player</a></div>
+                  <div>Cost: <span id="masterCost">36000</span> RP</div>
+               </div>
+            </div>
 
-      <div id="platinumColumns"  class="columns is-size-7">
-         <div class="league column is-1 is-flex"><img src="img/platinum.png" onclick="platinum()"></div>
-         <div class="column">Platinum players: <span id="platinums">0</span><br>
-            <a id="platinumButton" class="button is-small is-light" onclick="platinum()">Invite a platinum player</a> Cost: <span id="platinumCost">1200</span> RP<br></div>
-      </div>
+            <div id="challengerColumns"  class="columns is-size-7">
+               <div class="league column is-flex"><img src="img/challenger.png" onclick="challenger()"></div>
+               <div class="column">
+                  <div>Challenger players: <span id="challengers">0</span></div>
+                  <div><a id="challengerButton" class="button is-small is-light" onclick="challenger()">Invite a challenger player</a></div>
+                  <div>Cost: <span id="challengerCost">252000</span> RP</div>
+               </div>
+            </div>
+         </div>
 
-      <div id="diamondColumns"  class="columns is-size-7">
-         <div class="league column is-1 is-flex"><img src="img/diamond.png" onclick="diamond()"></div>
-         <div class="column">Diamond players: <span id="diamonds">0</span><br>
-            <a id="diamondButton" class="button is-small is-light" onclick="diamond()">Invite a diamond player</a> Cost: <span id="diamondCost">6000</span> RP<br></div>
-      </div>
+         <div id="rpColumn" class="column">
+            <div id="rpDiv">
+               <div>RP earned: <span id="rp-earned">0</span></div>
+               <div>RP per second: <span id="rp-persec"></span></div>
 
-      <div id="masterColumns"  class="columns is-size-7">
-         <div class="league column is-1 is-flex"><img src="img/master.png" onclick="master()"></div>
-         <div class="column">Master players: <span id="masters">0</span><br>
-            <a id="masterButton" class="button is-small is-light" onclick="master()">Invite a master player</a> Cost: <span id="masterCost">36000</span> RP<br></div>
-      </div>
+               <div class="rpButton">
+                  <a class="button is-warning is-rounded" id="rpButton" onmouseleave="increaseRpButton()" onmouseup="increaseRpButton()" onmousedown="decreaseRpButton()" onclick="incrementByOne()">GET FREE RP</a>
+               </div>
 
-      <div id="challengerColumns"  class="columns is-size-7">
-         <div class="league column is-1 is-flex"><img src="img/challenger.png" onclick="challenger()"></div>
-         <div class="column">Challenger players: <span id="challengers">0</span><br>
-            <a id="challengerButton" class="button is-small is-light" onclick="challenger()">Invite a challenger player</a> Cost: <span id="challengerCost">252000</span> RP<br></div>
+               <div class="deleteButton">
+                  <a class="button is-danger is-small is-rounded" onclick="deleteGame()">Reset</a>
+               </div>
+            </div>
+         </div>
+
+
       </div>
 
       <img id="boris" src="img/boris_naked.png" width="150px" height="150px" style="display: none" onclick="removeBoris()">
