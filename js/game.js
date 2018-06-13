@@ -32,6 +32,26 @@ var save = {
    challengers: 0
 };
 
+function prettify(input) {
+   var output = Math.trunc(input);
+   return output;
+}
+
+function fadeBoris() {
+   var target = document.getElementById("boris");
+   var fadeEffect = setInterval(function () {
+      if (!target.style.opacity) {
+         target.style.opacity = 1;
+      }
+      if (target.style.opacity > 0) {
+         target.style.opacity -= 0.01;
+      } else {
+         target.style.display = 'none';
+         target.style.opacity = 1;
+         clearInterval(fadeEffect);
+      }
+   }, 30);
+}
 
 function increaseRpButton() {
    document.getElementById('rpButton').className = 'button is-warning is-medium is-rounded';
@@ -54,11 +74,6 @@ function randomImage() {
    document.getElementById('rp-earned').innerHTML = prettify(parseInt(document.getElementById('rp-earned').innerHTML) - stolenRp);
    setTimeout(fadeBoris, 13000);
    setTimeout(randomImage, 30000 + Math.random() * 60000);
-}
-
-function prettify(input) {
-   var output = Math.trunc(input);
-   return output;
 }
 
 function incrementByOne() {
@@ -338,26 +353,6 @@ function deleteGame() {
 function removeBoris() {
    document.getElementById('boris').style.display = 'none';
    document.getElementById('rp-earned').innerHTML = prettify(parseInt(document.getElementById('rp-earned').innerHTML) + stolenRp);
-}
-
-function lowerOpacityOfBoris() {
-   document.getElementById('boris').style.opacity = (parseInt(document.getElementById('boris').style.opacity) - 0.01).toString();
-}
-
-function fadeBoris() {
-   var target = document.getElementById("boris");
-   var fadeEffect = setInterval(function () {
-      if (!target.style.opacity) {
-         target.style.opacity = 1;
-      }
-      if (target.style.opacity > 0) {
-         target.style.opacity -= 0.01;
-      } else {
-         target.style.display = 'none';
-         target.style.opacity = 1;
-         clearInterval(fadeEffect);
-      }
-   }, 30);
 }
 
 window.onbeforeunload = function(e) {
