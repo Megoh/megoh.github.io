@@ -87,6 +87,7 @@ function incrementInterval() {
    if (document.getElementById('rp-earned').innerHTML >= base.bronzeCost) {
       document.getElementById('silverColumns').style.visibility = 'visible';
    }
+   
    if (document.getElementById('rp-earned').innerHTML >= save.bronzeCost) {
       document.getElementById('bronzeButton').className = 'button is-small is-success';
    }
@@ -98,6 +99,7 @@ function incrementInterval() {
    if (document.getElementById('rp-earned').innerHTML >= base.silverCost) {
       document.getElementById('goldColumns').style.visibility = 'visible';
    }
+   
    if (document.getElementById('rp-earned').innerHTML >= save.silverCost) {
       document.getElementById('silverButton').className = 'button is-small is-success';
    }
@@ -121,6 +123,7 @@ function incrementInterval() {
    if (document.getElementById('rp-earned').innerHTML >= base.platinumCost) {
       document.getElementById('diamondColumns').style.visibility = 'visible';
    }
+   
    if (document.getElementById('rp-earned').innerHTML >= save.platinumCost) {
       document.getElementById('platinumButton').className = 'button is-small is-success';
    }
@@ -160,6 +163,54 @@ function incrementInterval() {
    else if (document.getElementById('rp-earned').innerHTML < save.challengerCost) {
       document.getElementById('challengerButton').className = 'button is-small is-light';
    }
+}
+
+function saveGame() {
+   save.rpEarned = document.getElementById('rp-earned').innerHTML;
+   localStorage.setItem("save",JSON.stringify(save));
+}
+
+window.onbeforeunload = function(e) {
+   saveGame();
+};
+
+function loadGame(){
+   var load = JSON.parse(localStorage.getItem("save"));
+
+   save.rpEarned = Math.trunc(load.rpEarned);
+   save.rpPerSec = Math.trunc(load.rpPerSec);
+   save.rpPerClick = load.rpPerClick;
+   save.bronzes = load.bronzes;
+   save.silvers = load.silvers;
+   save.golds = load.golds;
+   save.platinums = load.platinums;
+   save.diamonds = load.diamonds;
+   save.masters = load.masters;
+   save.challengers = load.challengers;
+   save.bronzeCost = Math.trunc(load.bronzeCost);
+   save.silverCost = Math.trunc(load.silverCost);
+   save.goldCost = Math.trunc(load.goldCost);
+   save.platinumCost = Math.trunc(load.platinumCost);
+   save.diamondCost = Math.trunc(load.diamondCost);
+   save.masterCost = Math.trunc(load.masterCost);
+   save.challengerCost = Math.trunc(load.challengerCost);
+
+   document.getElementById('rp-earned').innerHTML = save.rpEarned;
+   document.getElementById('rp-persec').innerHTML = save.rpPerSec;
+   document.getElementById('bronzes').innerHTML = save.bronzes;
+   document.getElementById('silvers').innerHTML = save.silvers;
+   document.getElementById('golds').innerHTML = save.golds;
+   document.getElementById('platinums').innerHTML = save.platinums;
+   document.getElementById('diamonds').innerHTML = save.diamonds;
+   document.getElementById('masters').innerHTML = save.masters;
+   document.getElementById('challengers').innerHTML = save.challengers;
+   document.getElementById('bronzeCost').innerHTML = save.bronzeCost;
+   document.getElementById('silverCost').innerHTML = save.silverCost;
+   document.getElementById('goldCost').innerHTML = save.goldCost;
+   document.getElementById('platinumCost').innerHTML = save.platinumCost;
+   document.getElementById('diamondCost').innerHTML = save.diamondCost;
+   document.getElementById('masterCost').innerHTML = save.masterCost;
+   document.getElementById('challengerCost').innerHTML = save.challengerCost;
 }
 
 window.onload = function () {
@@ -257,51 +308,6 @@ function challenger() {
    }
 }
 
-function saveGame() {
-   save.rpEarned = document.getElementById('rp-earned').innerHTML;
-   localStorage.setItem("save",JSON.stringify(save));
-}
-
-function loadGame(){
-   var load = JSON.parse(localStorage.getItem("save"));
-
-   save.rpEarned = Math.trunc(load.rpEarned);
-   save.rpPerSec = Math.trunc(load.rpPerSec);
-   save.rpPerClick = load.rpPerClick;
-   save.bronzes = load.bronzes;
-   save.silvers = load.silvers;
-   save.golds = load.golds;
-   save.platinums = load.platinums;
-   save.diamonds = load.diamonds;
-   save.masters = load.masters;
-   save.challengers = load.challengers;
-   save.bronzeCost = Math.trunc(load.bronzeCost);
-   save.silverCost = Math.trunc(load.silverCost);
-   save.goldCost = Math.trunc(load.goldCost);
-   save.platinumCost = Math.trunc(load.platinumCost);
-   save.diamondCost = Math.trunc(load.diamondCost);
-   save.masterCost = Math.trunc(load.masterCost);
-   save.challengerCost = Math.trunc(load.challengerCost);
-
-   document.getElementById('rp-earned').innerHTML = save.rpEarned;
-   document.getElementById('rp-persec').innerHTML = save.rpPerSec;
-   document.getElementById('bronzes').innerHTML = save.bronzes;
-   document.getElementById('silvers').innerHTML = save.silvers;
-   document.getElementById('golds').innerHTML = save.golds;
-   document.getElementById('platinums').innerHTML = save.platinums;
-   document.getElementById('diamonds').innerHTML = save.diamonds;
-   document.getElementById('masters').innerHTML = save.masters;
-   document.getElementById('challengers').innerHTML = save.challengers;
-   document.getElementById('bronzeCost').innerHTML = save.bronzeCost;
-   document.getElementById('silverCost').innerHTML = save.silverCost;
-   document.getElementById('goldCost').innerHTML = save.goldCost;
-   document.getElementById('platinumCost').innerHTML = save.platinumCost;
-   document.getElementById('diamondCost').innerHTML = save.diamondCost;
-   document.getElementById('masterCost').innerHTML = save.masterCost;
-   document.getElementById('challengerCost').innerHTML = save.challengerCost;
-
-}
-
 function deleteGame() {
    if (window.confirm("Do you REALLY want to reset the progress?")) { 
       localStorage.removeItem('save');
@@ -355,6 +361,3 @@ function removeBoris() {
    document.getElementById('rp-earned').innerHTML = prettify(parseInt(document.getElementById('rp-earned').innerHTML) + stolenRp);
 }
 
-window.onbeforeunload = function(e) {
-   saveGame();
-};
