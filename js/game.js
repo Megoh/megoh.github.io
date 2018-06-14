@@ -16,6 +16,13 @@ var save = {
    rpEarned: 0,
    rpPerSec: 0,
    rpPerClick: 1,
+   rpPerBronze: 1,
+   rpPerSilver: 2,
+   rpPerGold: 6,
+   rpPerPlatinum: 24,
+   rpPerDiamond: 120,
+   rpPerMaster: 720,
+   rpPerChallenger: 5040,
    bronzeCost: 50,
    silverCost: 100,
    goldCost: 300,
@@ -180,6 +187,13 @@ function loadGame(){
    save.rpEarned = Math.trunc(load.rpEarned);
    save.rpPerSec = Math.trunc(load.rpPerSec);
    save.rpPerClick = load.rpPerClick;
+   save.rpPerBronze = load.rpPerBronze;
+   save.rpPerSilver = load.rpPerSilver;
+   save.rpPerGold = load.rpPerGold;
+   save.rpPerPlatinum = load.rpPerPlatinum;
+   save.rpPerDiamond = load.rpPerDiamond;
+   save.rpPerMaster = load.rpPerMaster;
+   save.rpPerChallenger = load.rpPerChallenger;
    save.bronzes = load.bronzes;
    save.silvers = load.silvers;
    save.golds = load.golds;
@@ -197,6 +211,13 @@ function loadGame(){
 
    document.getElementById('rp-earned').innerHTML = save.rpEarned;
    document.getElementById('rp-persec').innerHTML = save.rpPerSec;
+   document.getElementById('rpPerBronze').innerHTML = save.rpPerBronze;
+   document.getElementById('rpPerSilver').innerHTML = save.rpPerSilver;
+   document.getElementById('rpPerGold').innerHTML = save.rpPerGold;
+   document.getElementById('rpPerPlatinum').innerHTML = save.rpPerPlatinum;
+   document.getElementById('rpPerDiamond').innerHTML = save.rpPerDiamond;
+   document.getElementById('rpPerMaster').innerHTML = save.rpPerMaster;
+   document.getElementById('rpPerChallenger').innerHTML = save.rpPerChallenger;
    document.getElementById('bronzes').innerHTML = save.bronzes;
    document.getElementById('silvers').innerHTML = save.silvers;
    document.getElementById('golds').innerHTML = save.golds;
@@ -226,9 +247,11 @@ function bronze() {
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.bronzeCost);
       document.getElementById('bronzes').innerHTML = parseInt(document.getElementById('bronzes').innerHTML) + 1;
       document.getElementById('bronzeCost').innerHTML = prettify(parseInt(document.getElementById('bronzeCost').innerHTML) * multiplier);
+      document.getElementById('rpPerBronze').innerHTML = prettify(parseInt(document.getElementById('rpPerBronze').innerHTML) + 1);
       save.bronzeCost *= multiplier;
       save.bronzes += 1;
       save.rpPerClick += 1;
+      save.rpPerBronze += 1;
    }
 }
 
@@ -238,9 +261,11 @@ function silver() {
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.silverCost);
       document.getElementById('silvers').innerHTML = parseInt(document.getElementById('silvers').innerHTML) + 1;
       document.getElementById('silverCost').innerHTML = prettify(parseInt(document.getElementById('silverCost').innerHTML) * multiplier);
+      document.getElementById('rpPerSilver').innerHTML = prettify(parseInt(document.getElementById('rpPerSilver').innerHTML) + 2);
       save.silverCost *= multiplier;
       save.silvers += 1;
       save.rpPerClick += 1;
+      save.rpPerBronze += 2;
    }
 }
 
@@ -250,9 +275,11 @@ function gold() {
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.goldCost);
       document.getElementById('golds').innerHTML = parseInt(document.getElementById('golds').innerHTML) + 1;
       document.getElementById('goldCost').innerHTML = prettify(parseInt(document.getElementById('goldCost').innerHTML) * multiplier);
+      document.getElementById('rpPerGold').innerHTML = prettify(parseInt(document.getElementById('rpPerGold').innerHTML) + 6);
       save.goldCost *= multiplier;
       save.golds += 1;
       save.rpPerClick += 1;
+      save.rpPerBronze += 6;
    }
 }
 
@@ -262,9 +289,11 @@ function platinum() {
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.platinumCost);
       document.getElementById('platinums').innerHTML = parseInt(document.getElementById('platinums').innerHTML) + 1;
       document.getElementById('platinumCost').innerHTML = prettify(parseInt(document.getElementById('platinumCost').innerHTML) * multiplier);
+      document.getElementById('rpPerPlatinum').innerHTML = prettify(parseInt(document.getElementById('rpPerPlatinum').innerHTML) + 24);
       save.platinumCost *= multiplier;
       save.platinums += 1;
       save.rpPerClick += 1;
+      save.rpPerBronze += 24;
    }
 }
 
@@ -274,9 +303,11 @@ function diamond() {
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.diamondCost);
       document.getElementById('diamonds').innerHTML = parseInt(document.getElementById('diamonds').innerHTML) + 1;
       document.getElementById('diamondCost').innerHTML = prettify(parseInt(document.getElementById('diamondCost').innerHTML) * multiplier);
+      document.getElementById('rpPerGold').innerHTML = prettify(parseInt(document.getElementById('rpPerGold').innerHTML) + 120);
       save.diamondCost *= multiplier;
       save.diamonds += 1;
       save.rpPerClick += 1;
+      save.rpPerBronze += 120;
    }
 }
 
@@ -286,9 +317,11 @@ function master() {
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.masterCost);
       document.getElementById('masters').innerHTML = parseInt(document.getElementById('masters').innerHTML) + 1;
       document.getElementById('masterCost').innerHTML = prettify(parseInt(document.getElementById('masterCost').innerHTML) * multiplier);
+      document.getElementById('rpPerGold').innerHTML = prettify(parseInt(document.getElementById('rpPerGold').innerHTML) + 720);
       save.masterCost *= multiplier;
       save.masters += 1;
       save.rpPerClick += 1;
+      save.rpPerBronze += 720;
    }
 }
 
@@ -298,9 +331,11 @@ function challenger() {
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.challengerCost);
       document.getElementById('challengers').innerHTML = parseInt(document.getElementById('challengers').innerHTML) + 1;
       document.getElementById('challengerCost').innerHTML = prettify(parseInt(document.getElementById('challengerCost').innerHTML) * multiplier);
+      document.getElementById('rpPerGold').innerHTML = prettify(parseInt(document.getElementById('rpPerGold').innerHTML) + 5040);
       save.challengerCost *= multiplier;
       save.challengers += 1;
       save.rpPerClick += 1;
+      save.rpPerBronze += 5040;
 
       if (save.challengers == 1) {
          alert('Congratulations! You won the game.');
@@ -314,6 +349,13 @@ function deleteGame() {
 
       document.getElementById('rp-earned').innerHTML = '0';
       document.getElementById('rp-persec').innerHTML = '0';
+      document.getElementById('rpPerBronze').innerHTML = '0';
+      document.getElementById('rpPerSilver').innerHTML = '0';
+      document.getElementById('rpPerGold').innerHTML = '0';
+      document.getElementById('rpPerPlatinum').innerHTML = '0';
+      document.getElementById('rpPerDiamond').innerHTML = '0';
+      document.getElementById('rpPerMaster').innerHTML = '0';
+      document.getElementById('rpPerChallenger').innerHTML = '0';
       document.getElementById('bronzes').innerHTML = '0';
       document.getElementById('silvers').innerHTML = '0';
       document.getElementById('golds').innerHTML = '0';
