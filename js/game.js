@@ -303,7 +303,7 @@ function diamond() {
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.diamondCost);
       document.getElementById('diamonds').innerHTML = parseInt(document.getElementById('diamonds').innerHTML) + 1;
       document.getElementById('diamondCost').innerHTML = prettify(parseInt(document.getElementById('diamondCost').innerHTML) * multiplier);
-      document.getElementById('rpPerGold').innerHTML = prettify(parseInt(document.getElementById('rpPerGold').innerHTML) + 120);
+      document.getElementById('rpPerDiamond').innerHTML = prettify(parseInt(document.getElementById('rpPerDiamond').innerHTML) + 120);
       save.diamondCost *= multiplier;
       save.diamonds += 1;
       save.rpPerClick += 1;
@@ -317,7 +317,7 @@ function master() {
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.masterCost);
       document.getElementById('masters').innerHTML = parseInt(document.getElementById('masters').innerHTML) + 1;
       document.getElementById('masterCost').innerHTML = prettify(parseInt(document.getElementById('masterCost').innerHTML) * multiplier);
-      document.getElementById('rpPerGold').innerHTML = prettify(parseInt(document.getElementById('rpPerGold').innerHTML) + 720);
+      document.getElementById('rpPerMaster').innerHTML = prettify(parseInt(document.getElementById('rpPerMaster').innerHTML) + 720);
       save.masterCost *= multiplier;
       save.masters += 1;
       save.rpPerClick += 1;
@@ -331,7 +331,7 @@ function challenger() {
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.challengerCost);
       document.getElementById('challengers').innerHTML = parseInt(document.getElementById('challengers').innerHTML) + 1;
       document.getElementById('challengerCost').innerHTML = prettify(parseInt(document.getElementById('challengerCost').innerHTML) * multiplier);
-      document.getElementById('rpPerGold').innerHTML = prettify(parseInt(document.getElementById('rpPerGold').innerHTML) + 5040);
+      document.getElementById('rpPerChallenger').innerHTML = prettify(parseInt(document.getElementById('rpPerChallenger').innerHTML) + 5040);
       save.challengerCost *= multiplier;
       save.challengers += 1;
       save.rpPerClick += 1;
