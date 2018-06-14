@@ -16,13 +16,13 @@ var save = {
    rpEarned: 0,
    rpPerSec: 0,
    rpPerClick: 1,
-   rpPerBronze: 1,
-   rpPerSilver: 2,
-   rpPerGold: 6,
-   rpPerPlatinum: 24,
-   rpPerDiamond: 120,
-   rpPerMaster: 720,
-   rpPerChallenger: 5040,
+   rpPerBronze: 0,
+   rpPerSilver: 0,
+   rpPerGold: 0,
+   rpPerPlatinum: 0,
+   rpPerDiamond: 0,
+   rpPerMaster: 0,
+   rpPerChallenger: 0,
    bronzeCost: 50,
    silverCost: 100,
    goldCost: 300,
@@ -174,7 +174,7 @@ function incrementInterval() {
 
 function saveGame() {
    save.rpEarned = document.getElementById('rp-earned').innerHTML;
-   localStorage.setItem("save",JSON.stringify(save));
+   localStorage.setItem("save", JSON.stringify(save));
 }
 
 window.onbeforeunload = function(e) {
@@ -265,7 +265,7 @@ function silver() {
       save.silverCost *= multiplier;
       save.silvers += 1;
       save.rpPerClick += 1;
-      save.rpPerBronze += 2;
+      save.rpPerSilver += 2;
    }
 }
 
@@ -279,7 +279,7 @@ function gold() {
       save.goldCost *= multiplier;
       save.golds += 1;
       save.rpPerClick += 1;
-      save.rpPerBronze += 6;
+      save.rpPerGold += 6;
    }
 }
 
@@ -293,7 +293,7 @@ function platinum() {
       save.platinumCost *= multiplier;
       save.platinums += 1;
       save.rpPerClick += 1;
-      save.rpPerBronze += 24;
+      save.rpPerPlatinum += 24;
    }
 }
 
@@ -307,7 +307,7 @@ function diamond() {
       save.diamondCost *= multiplier;
       save.diamonds += 1;
       save.rpPerClick += 1;
-      save.rpPerBronze += 120;
+      save.rpPerDiamond += 120;
    }
 }
 
@@ -321,7 +321,7 @@ function master() {
       save.masterCost *= multiplier;
       save.masters += 1;
       save.rpPerClick += 1;
-      save.rpPerBronze += 720;
+      save.rpPerMaster += 720;
    }
 }
 
@@ -335,7 +335,7 @@ function challenger() {
       save.challengerCost *= multiplier;
       save.challengers += 1;
       save.rpPerClick += 1;
-      save.rpPerBronze += 5040;
+      save.rpPerChallenger += 5040;
 
       if (save.challengers == 1) {
          alert('Congratulations! You won the game.');
