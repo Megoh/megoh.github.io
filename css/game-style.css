@@ -21,7 +21,7 @@ h5 {
 #silverColumns, #goldColumns, #platinumColumns, #diamondColumns, #masterColumns, #challengerColumns {
    display: flex;
    align-items: center;
-   visibility: hidden;
+   display: none;
 }
 
 #rpColumn {

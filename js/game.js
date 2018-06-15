@@ -91,9 +91,7 @@ function incrementInterval() {
    document.getElementById('rp-earned').innerHTML = prettify(parseFloat(document.getElementById('rp-earned').innerHTML) + (save.rpPerSec / 40)).toFixed(2);
    document.getElementById('rp-persec').innerHTML = prettify(save.rpPerSec);
 
-   if (document.getElementById('rp-earned').innerHTML >= base.bronzeCost) {
-      document.getElementById('silverColumns').style.visibility = 'visible';
-   }
+
 
    if (document.getElementById('rp-earned').innerHTML >= save.bronzeCost) {
       document.getElementById('bronzeButton').className = 'button is-small is-success';
@@ -103,8 +101,8 @@ function incrementInterval() {
       document.getElementById('bronzeButton').className = 'button is-small is-light';
    }
 
-   if (document.getElementById('rp-earned').innerHTML >= base.silverCost) {
-      document.getElementById('goldColumns').style.visibility = 'visible';
+   if (document.getElementById('rp-earned').innerHTML >= base.bronzeCost) {
+      document.getElementById('silverColumns').style.display = 'flex';
    }
 
    if (document.getElementById('rp-earned').innerHTML >= save.silverCost) {
@@ -115,8 +113,8 @@ function incrementInterval() {
       document.getElementById('silverButton').className = 'button is-small is-light';
    }
 
-   if (document.getElementById('rp-earned').innerHTML >= base.goldCost) {
-      document.getElementById('platinumColumns').style.visibility = 'visible';
+   if (document.getElementById('rp-earned').innerHTML >= base.silverCost) {
+      document.getElementById('goldColumns').style.display = 'flex';
    }
 
    if (document.getElementById('rp-earned').innerHTML >= save.goldCost) {
@@ -127,8 +125,12 @@ function incrementInterval() {
       document.getElementById('goldButton').className = 'button is-small is-light';
    }
 
+   if (document.getElementById('rp-earned').innerHTML >= base.goldCost) {
+      document.getElementById('platinumColumns').style.display = 'flex';
+   }
+
    if (document.getElementById('rp-earned').innerHTML >= base.platinumCost) {
-      document.getElementById('diamondColumns').style.visibility = 'visible';
+      document.getElementById('diamondColumns').style.display = 'flex';
    }
 
    if (document.getElementById('rp-earned').innerHTML >= save.platinumCost) {
@@ -140,7 +142,7 @@ function incrementInterval() {
    }
 
    if (document.getElementById('rp-earned').innerHTML >= base.diamondCost) {
-      document.getElementById('masterColumns').style.visibility = 'visible';
+      document.getElementById('masterColumns').style.display = 'flex';
    }
 
    if (document.getElementById('rp-earned').innerHTML >= save.diamondCost) {
@@ -152,7 +154,7 @@ function incrementInterval() {
    }
 
    if (document.getElementById('rp-earned').innerHTML >= base.masterCost) {
-      document.getElementById('challengerColumns').style.visibility = 'visible';
+      document.getElementById('challengerColumns').style.display = 'flex';
    }
 
    if (document.getElementById('rp-earned').innerHTML >= save.masterCost) {
@@ -233,13 +235,6 @@ function loadGame(){
    document.getElementById('masterCost').innerHTML = save.masterCost;
    document.getElementById('challengerCost').innerHTML = save.challengerCost;
 }
-
-window.onload = function () {
-   loadGame();
-   setInterval(incrementInterval, 25);
-   setInterval(saveGame, 300000);
-   setTimeout(randomImage, 30000 + Math.random() * 60000);
-};
 
 function bronze() {
    if (document.getElementById('rp-earned').innerHTML >= save.bronzeCost) {
@@ -396,12 +391,12 @@ function deleteGame() {
       save.masterCost = parseInt(document.getElementById('masterCost').innerHTML);
       save.challengerCost = parseInt(document.getElementById('challengerCost').innerHTML);
 
-      document.getElementById('silverColumns').style.visibility = 'hidden';
-      document.getElementById('goldColumns').style.visibility = 'hidden';
-      document.getElementById('platinumColumns').style.visibility = 'hidden';
-      document.getElementById('diamondColumns').style.visibility = 'hidden';
-      document.getElementById('masterColumns').style.visibility = 'hidden';
-      document.getElementById('challengerColumns').style.visibility = 'hidden';
+      document.getElementById('silverColumns').style.display = 'none';
+      document.getElementById('goldColumns').style.display = 'none';
+      document.getElementById('platinumColumns').style.display = 'none';
+      document.getElementById('diamondColumns').style.display = 'none';
+      document.getElementById('masterColumns').style.display = 'none';
+      document.getElementById('challengerColumns').style.display = 'none';
    }
 }
 
@@ -409,4 +404,11 @@ function removeBoris() {
    document.getElementById('boris').style.display = 'none';
    document.getElementById('rp-earned').innerHTML = prettify(parseInt(document.getElementById('rp-earned').innerHTML) + stolenRp);
 }
+
+window.onload = function () {
+   loadGame();
+   setInterval(incrementInterval, 25);
+   setInterval(saveGame, 300000);
+   setTimeout(randomImage, 30000 + Math.random() * 60000);
+};
 
