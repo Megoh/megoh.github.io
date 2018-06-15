@@ -40,7 +40,7 @@ var save = {
 };
 
 function prettify(input) {
-   var output = Math.trunc(input);
+   var output = input;
    return output;
 }
 
@@ -84,11 +84,11 @@ function randomImage() {
 }
 
 function incrementByOne() {
-   document.getElementById("rp-earned").innerHTML = parseInt(document.getElementById('rp-earned').innerHTML) + save.rpPerClick;
+   document.getElementById("rp-earned").innerHTML = (parseInt(document.getElementById('rp-earned').innerHTML) + save.rpPerClick).toFixed(2);
 }
 
 function incrementInterval() {
-   document.getElementById('rp-earned').innerHTML = prettify(parseInt(document.getElementById('rp-earned').innerHTML) + save.rpPerSec);
+   document.getElementById('rp-earned').innerHTML = prettify(parseFloat(document.getElementById('rp-earned').innerHTML) + (save.rpPerSec / 40)).toFixed(2);
    document.getElementById('rp-persec').innerHTML = prettify(save.rpPerSec);
 
    if (document.getElementById('rp-earned').innerHTML >= base.bronzeCost) {
@@ -236,7 +236,7 @@ function loadGame(){
 
 window.onload = function () {
    loadGame();
-   setInterval(incrementInterval, 1000);
+   setInterval(incrementInterval, 25);
    setInterval(saveGame, 300000);
    setTimeout(randomImage, 30000 + Math.random() * 60000);
 };
@@ -246,7 +246,7 @@ function bronze() {
       save.rpPerSec += 1;
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.bronzeCost);
       document.getElementById('bronzes').innerHTML = parseInt(document.getElementById('bronzes').innerHTML) + 1;
-      document.getElementById('bronzeCost').innerHTML = prettify(parseInt(document.getElementById('bronzeCost').innerHTML) * multiplier);
+      document.getElementById('bronzeCost').innerHTML = Math.trunc(prettify(parseInt(document.getElementById('bronzeCost').innerHTML) * multiplier));
       document.getElementById('rpPerBronze').innerHTML = prettify(parseInt(document.getElementById('rpPerBronze').innerHTML) + 1);
       save.bronzeCost *= multiplier;
       save.bronzes += 1;
@@ -260,7 +260,7 @@ function silver() {
       save.rpPerSec += 2;
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.silverCost);
       document.getElementById('silvers').innerHTML = parseInt(document.getElementById('silvers').innerHTML) + 1;
-      document.getElementById('silverCost').innerHTML = prettify(parseInt(document.getElementById('silverCost').innerHTML) * multiplier);
+      document.getElementById('silverCost').innerHTML = Math.trunc(prettify(parseInt(document.getElementById('silverCost').innerHTML) * multiplier));
       document.getElementById('rpPerSilver').innerHTML = prettify(parseInt(document.getElementById('rpPerSilver').innerHTML) + 2);
       save.silverCost *= multiplier;
       save.silvers += 1;
@@ -274,7 +274,7 @@ function gold() {
       save.rpPerSec += 6;
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.goldCost);
       document.getElementById('golds').innerHTML = parseInt(document.getElementById('golds').innerHTML) + 1;
-      document.getElementById('goldCost').innerHTML = prettify(parseInt(document.getElementById('goldCost').innerHTML) * multiplier);
+      document.getElementById('goldCost').innerHTML = Math.trunc(prettify(parseInt(document.getElementById('goldCost').innerHTML) * multiplier));
       document.getElementById('rpPerGold').innerHTML = prettify(parseInt(document.getElementById('rpPerGold').innerHTML) + 6);
       save.goldCost *= multiplier;
       save.golds += 1;
@@ -288,7 +288,7 @@ function platinum() {
       save.rpPerSec += 24;
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.platinumCost);
       document.getElementById('platinums').innerHTML = parseInt(document.getElementById('platinums').innerHTML) + 1;
-      document.getElementById('platinumCost').innerHTML = prettify(parseInt(document.getElementById('platinumCost').innerHTML) * multiplier);
+      document.getElementById('platinumCost').innerHTML = Math.trunc(prettify(parseInt(document.getElementById('platinumCost').innerHTML) * multiplier));
       document.getElementById('rpPerPlatinum').innerHTML = prettify(parseInt(document.getElementById('rpPerPlatinum').innerHTML) + 24);
       save.platinumCost *= multiplier;
       save.platinums += 1;
@@ -302,7 +302,7 @@ function diamond() {
       save.rpPerSec += 120;
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.diamondCost);
       document.getElementById('diamonds').innerHTML = parseInt(document.getElementById('diamonds').innerHTML) + 1;
-      document.getElementById('diamondCost').innerHTML = prettify(parseInt(document.getElementById('diamondCost').innerHTML) * multiplier);
+      document.getElementById('diamondCost').innerHTML = Math.trunc(prettify(parseInt(document.getElementById('diamondCost').innerHTML) * multiplier));
       document.getElementById('rpPerDiamond').innerHTML = prettify(parseInt(document.getElementById('rpPerDiamond').innerHTML) + 120);
       save.diamondCost *= multiplier;
       save.diamonds += 1;
@@ -316,7 +316,7 @@ function master() {
       save.rpPerSec += 720;
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.masterCost);
       document.getElementById('masters').innerHTML = parseInt(document.getElementById('masters').innerHTML) + 1;
-      document.getElementById('masterCost').innerHTML = prettify(parseInt(document.getElementById('masterCost').innerHTML) * multiplier);
+      document.getElementById('masterCost').innerHTML = Math.trunc(prettify(parseInt(document.getElementById('masterCost').innerHTML) * multiplier));
       document.getElementById('rpPerMaster').innerHTML = prettify(parseInt(document.getElementById('rpPerMaster').innerHTML) + 720);
       save.masterCost *= multiplier;
       save.masters += 1;
@@ -330,7 +330,7 @@ function challenger() {
       save.rpPerSec += 5040;
       document.getElementById('rp-earned').innerHTML = Math.trunc(document.getElementById('rp-earned').innerHTML - save.challengerCost);
       document.getElementById('challengers').innerHTML = parseInt(document.getElementById('challengers').innerHTML) + 1;
-      document.getElementById('challengerCost').innerHTML = prettify(parseInt(document.getElementById('challengerCost').innerHTML) * multiplier);
+      document.getElementById('challengerCost').innerHTML = Math.trunc(prettify(parseInt(document.getElementById('challengerCost').innerHTML) * multiplier));
       document.getElementById('rpPerChallenger').innerHTML = prettify(parseInt(document.getElementById('rpPerChallenger').innerHTML) + 5040);
       save.challengerCost *= multiplier;
       save.challengers += 1;
