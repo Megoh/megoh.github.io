@@ -405,10 +405,10 @@ function removeBoris() {
    document.getElementById('rp-earned').innerHTML = prettify(parseInt(document.getElementById('rp-earned').innerHTML) + stolenRp);
 }
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function(event) {
    loadGame();
    setInterval(incrementInterval, 25);
    setInterval(saveGame, 300000);
    setTimeout(randomImage, 30000 + Math.random() * 60000);
-};
+});
 
