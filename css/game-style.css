@@ -1,3 +1,8 @@
+html {
+   background: url(../img/seamless_paper_texture.png) top left repeat;
+   background-position: top left;
+}
+
 body {
    margin: 15px;
 }
