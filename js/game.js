@@ -540,7 +540,7 @@ function deleteGame() {
       document.getElementById('masterCost').innerHTML = '36000';
       document.getElementById('challengerCost').innerHTML = '252000';
 
-      save.rpPerClick = 100;
+      save.rpPerClick = 1;
       save.rpEarned = parseInt(document.getElementById('rp-earned').innerHTML);
       save.rpPerSec = parseInt(document.getElementById('rp-persec').innerHTML);
       save.rpPerBronze = parseInt(document.getElementById('rpPerBronze').innerHTML);
