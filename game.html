@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>RP Clicker v1.31.28</title>
+      <title>RP Clicker v1.32.29</title>
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +12,21 @@
 
    </head>
    <body>
+      <div class="columns">
+         <div class="column is-one-third">
+            <article id="introduction" class="message is-info">
+               <div class="message-header">
+                  <p>Hello Summoner</p>
+                  <button class="delete" aria-label="delete" onclick="deleteIntroduction()"></button>
+               </div>
+               <div class="message-body">
+                  In this game you are supposed to earn as much RP as possible, first by clicking the big yellow button to get it for free and then by inviting better and better players who will get the RP for you.
+               </div>
+            </article>
+         </div>
+
+      </div>
+
       <div class="columns">
          <div class="column is-two-fifths">
             <h5 class="title is-5">Players</h5>
@@ -106,7 +121,7 @@
       </div>
 
       <img id="boris" src="img/boris_naked.png" width="150px" height="150px" style="display: none" onclick="removeBoris()">
-      
+
       <script src="js/game.js"></script>
 
    </body>

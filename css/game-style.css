@@ -80,3 +80,10 @@ h5 {
    flex-direction: column;
 }
 
+#introduction {
+   position: absolute;
+   z-index: 1;
+   left: 35%;
+   top: 35%;
+   width: 475px;
+}

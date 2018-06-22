@@ -325,7 +325,7 @@ function gold() {
       save.rpPerSec += 6;
       save.golds += 1;
       save.rpPerClick += 1;
-      save.rpPerGold += 2;
+      save.rpPerGold += 6;
       document.getElementById('rp-earned').innerHTML = Math.round(document.getElementById('rp-earned').innerHTML - save.goldCost);
       save.goldCost = Math.round((save.goldCost * multiplier).toFixed(3));
       document.getElementById('goldCost').innerHTML = Math.round(prettify(parseInt(document.getElementById('goldCost').innerHTML) * multiplier));
@@ -339,7 +339,7 @@ function platinum() {
       save.rpPerSec += 24;
       save.platinums += 1;
       save.rpPerClick += 1;
-      save.rpPerPlatinum += 2;
+      save.rpPerPlatinum += 24;
       document.getElementById('rp-earned').innerHTML = Math.round(document.getElementById('rp-earned').innerHTML - save.platinumCost);
       save.platinumCost = Math.round((save.platinumCost * multiplier).toFixed(3));
       document.getElementById('platinumCost').innerHTML = Math.round(prettify(parseInt(document.getElementById('platinumCost').innerHTML) * multiplier));
@@ -353,7 +353,7 @@ function diamond() {
       save.rpPerSec += 120;
       save.diamonds += 1;
       save.rpPerClick += 1;
-      save.rpPerDiamond += 2;
+      save.rpPerDiamond += 120;
       document.getElementById('rp-earned').innerHTML = Math.round(document.getElementById('rp-earned').innerHTML - save.diamondCost);
       save.diamondCost = Math.round((save.diamondCost * multiplier).toFixed(3));
       document.getElementById('diamondCost').innerHTML = Math.round(prettify(parseInt(document.getElementById('diamondCost').innerHTML) * multiplier));
@@ -367,7 +367,7 @@ function master() {
       save.rpPerSec += 720;
       save.masters += 1;
       save.rpPerClick += 1;
-      save.rpPerMaster += 2;
+      save.rpPerMaster += 720;
       document.getElementById('rp-earned').innerHTML = Math.round(document.getElementById('rp-earned').innerHTML - save.masterCost);
       save.masterCost = Math.round((save.masterCost * multiplier).toFixed(3));
       document.getElementById('masterCost').innerHTML = Math.round(prettify(parseInt(document.getElementById('masterCost').innerHTML) * multiplier));
@@ -381,7 +381,7 @@ function challenger() {
       save.rpPerSec += 5040;
       save.challengers += 1;
       save.rpPerClick += 1;
-      save.rpPerChallenger += 2;
+      save.rpPerChallenger += 5040;
       document.getElementById('rp-earned').innerHTML = Math.round(document.getElementById('rp-earned').innerHTML - save.challengerCost);
       save.challengerCost = Math.round((save.challengerCost * multiplier).toFixed(3));
       document.getElementById('challengerCost').innerHTML = Math.round(prettify(parseInt(document.getElementById('challengerCost').innerHTML) * multiplier));
@@ -577,6 +577,10 @@ function deleteGame() {
 function removeBoris() {
    document.getElementById('boris').style.display = 'none';
    document.getElementById('rp-earned').innerHTML = prettify(parseInt(document.getElementById('rp-earned').innerHTML) + stolenRp);
+}
+
+function deleteIntroduction() {
+   document.getElementById('introduction').remove();
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
