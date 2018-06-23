@@ -13,6 +13,7 @@ const base = {
 }
 
 var save = {
+   introduction: true,
    rpEarned: 0,
    rpPerSec: 0,
    rpPerClick: 1,
@@ -240,6 +241,7 @@ window.onbeforeunload = function(e) {
 function loadGame(){
    var load = JSON.parse(localStorage.getItem("save"));
 
+   save.introduction = load.introduction;
    save.rpEarned = Math.round(load.rpEarned);
    save.rpPerSec = Math.round(load.rpPerSec);
    save.rpPerClick = load.rpPerClick;
@@ -288,6 +290,8 @@ function loadGame(){
    document.getElementById('diamondCost').innerHTML = save.diamondCost;
    document.getElementById('masterCost').innerHTML = save.masterCost;
    document.getElementById('challengerCost').innerHTML = save.challengerCost;
+   
+   if (save.introduction) { document.getElementById('introduction').style.display = 'block' };
 }
 
 function bronze() {
@@ -540,6 +544,7 @@ function deleteGame() {
       document.getElementById('masterCost').innerHTML = '36000';
       document.getElementById('challengerCost').innerHTML = '252000';
 
+      save.introduction = true;
       save.rpPerClick = 1;
       save.rpEarned = parseInt(document.getElementById('rp-earned').innerHTML);
       save.rpPerSec = parseInt(document.getElementById('rp-persec').innerHTML);
@@ -571,6 +576,8 @@ function deleteGame() {
       document.getElementById('diamondColumns').style.display = 'none';
       document.getElementById('masterColumns').style.display = 'none';
       document.getElementById('challengerColumns').style.display = 'none';
+      
+      //document.getElementById('introduction').style.display = 'none';
    }
 }
 
@@ -581,6 +588,7 @@ function removeBoris() {
 
 function deleteIntroduction() {
    document.getElementById('introduction').remove();
+   save.introduction = false;
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
