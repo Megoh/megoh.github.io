@@ -1,0 +1,200 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 260rem;
+  color: #fff;
+  margin: 0;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f45b69;
+  height: 25rem;
+}
+
+section h1 {
+  font-size: 4.2rem;
+}
+
+main {
+  background-color: #456990;
+  height: 100%;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+.messageBox {
+  opacity: 0;
+  transition: 0.7s;
+  position: absolute;
+  background-color: #f45b69;
+  width: 38.5rem;
+  padding-left: 1.5rem;
+}
+
+.messageBox::before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+time {
+  display: inline-block;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+
+.messageBox p {
+  font-size: 1.8rem;
+}
+
+.leftMessageBox {
+  right: 62.25%;
+}
+
+.rightMessageBox {
+  left: 62.25%;
+}
+
+.leftMessageBox::before {
+  border-top: 1rem solid transparent;
+  border-left: 2rem solid #f45b69;
+  border-bottom: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  right: -6%;
+  top: 86%;
+}
+
+.rightMessageBox::before {
+  border-top: 1rem solid transparent;
+  border-left: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  border-right: 2rem solid #f45b69;
+  left: -6%;
+  top: 80%;
+}
+
+#messageBox1934 {
+  opacity: 1;
+  top: 37.5rem;
+  left: 52.25%;
+  width: 38.5rem;
+}
+
+#messageBox1937 {
+  opacity: 1;
+  top: 56.25rem;
+  right: 52.25%;
+}
+
+#messageBox1940 {
+  opacity: 1;
+  top: 79rem;
+  left: 52.25%;
+}
+
+#messageBox1943 {
+  top: 98.2rem;
+}
+
+#messageBox1946 {
+  top: 119rem;
+}
+
+#messageBox1956 {
+  top: 138.1rem;
+}
+
+#messageBox1957 {
+  top: 159em;
+}
+
+#messageBox1967 {
+  top: 178.15rem;
+}
+
+#messageBox1977 {
+  top: 199rem;
+}
+
+#messageBox1985 {
+  top: 218.2rem;
+}
+
+#messageBox2000 {
+  top: 239rem;
+}
+
+#messageBox2005 {
+  top: 258.3rem;
+}
+
+.circle {
+  position: absolute;
+  left: calc(50% - 1.5rem);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: #fff;
+  transition: 0.7s;
+}
+
+#circle1 {
+  background-color: #f45b69;
+  top: 50rem;
+}
+
+#circle2 {
+  background-color: #f45b69;
+  top: 70rem;
+}
+
+#circle3 {
+  background-color: #f45b69;
+  top: 90rem;
+}
+
+#circle4 {
+  top: 110rem;
+}
+
+#circle5 {
+  top: 130rem;
+}
+
+#circle6 {
+  top: 150rem;
+}
+
+#circle7 {
+  top: 170rem;
+}
+
+#circle8 {
+  top: 190rem;
+}
+
+#circle9 {
+  top: 210rem;
+}
+
+#circle10 {
+  top: 230rem;
+}
+
+#circle11 {
+  top: 250rem;
+}
+
+#circle12 {
+  top: 270rem;
+}

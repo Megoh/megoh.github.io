@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Accordion</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="accordion">
+      <div id="accordionItems">
+        <div class="accordionItem" id="about">
+          <div class="accordionTitleRow">
+            <p>About accordions</p>
+          </div>
+          <div class="accordionContent">
+            <p>
+              JavaScript accordions let you squeeze a lot of content into a
+              small space in a Web page.
+            </p>
+            <p>
+              This simple accordion degrades gracefully in browsers that don't
+              support JavaScript or CSS.
+            </p>
+          </div>
+        </div>
+        <div class="accordionItem closed" id="items">
+          <div class="accordionTitleRow">
+            <p>Accordion items</p>
+          </div>
+          <div class="accordionContent">
+            <p>
+              A JavaScript accordion is made up of a number of
+              expandable/collapsible items. Only one item is ever shown at a
+              time.
+            </p>
+            <p>
+              You can include any content you want inside an accordion item.
+              Here's a bullet list:
+            </p>
+            <ul>
+              <li>List item #1</li>
+              <li>List item #2</li>
+              <li>List item #3</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordionItem closed" id="howTo">
+          <div class="accordionTitleRow">
+            <p>How to use a JavaScript accordion</p>
+          </div>
+          <div class="accordionContent">
+            <p>
+              Click an accordion item's heading to expand it. To collapse the
+              item, click it again, or click another item heading.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

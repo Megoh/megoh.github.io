@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Galeria zdjęć." />
+
+    <title>Galeria</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+      integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+      integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Studio Benson</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Strona główna</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="gallery.html"
+                >Galeria<span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="content-container" class="container my-4">
+      <div class="container gallery-container" role="main">
+        <div class="tz-gallery">
+          <div class="row my-3">
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/tir.jpg">
+                  <img
+                    src="images/tir.jpg"
+                    alt="Park"
+                    class="card-img-top"
+                    style="max-height: 250px; width: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/banner2.jpg">
+                  <img
+                    src="images/banner2.jpg"
+                    alt="Park"
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/banner1.jpg">
+                  <img
+                    src="images/banner1.jpg"
+                    alt="Banner"
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/cborg_small.jpg">
+                  <img
+                    src="images/cborg_small.jpg"
+                    alt="Ulotka"
+                    class="card-img-top"
+                    style="max-height: 250px; width: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/cborg.jpg">
+                  <img
+                    src="images/cborg.jpg"
+                    alt="Ulotka"
+                    class="card-img-top"
+                    style="max-height: 250px; width: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/crossfit_jawor.jpg">
+                  <img
+                    src="images/crossfit_jawor.jpg"
+                    alt=""
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/devil_energy.jpg">
+                  <img
+                    src="images/devil_energy.jpg"
+                    alt="Plakat"
+                    class="card-img-top"
+                    style="max-height: 250px; width: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/dompol.jpg">
+                  <img
+                    src="images/dompol.jpg"
+                    alt="Samochód"
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/ekosolar.jpg">
+                  <img
+                    src="images/ekosolar.jpg"
+                    alt="Samochód"
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/entrance.jpg">
+                  <img
+                    src="images/entrance.jpg"
+                    alt="Znak wjazdu"
+                    class="card-img-top"
+                    style="max-height: 250px; width: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/fach.jpg">
+                  <img
+                    src="images/fach.jpg"
+                    alt=""
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/fach2.jpg">
+                  <img
+                    src="images/fach2.jpg"
+                    alt=""
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/fitway.jpg">
+                  <img
+                    src="images/fitway.jpg"
+                    alt=""
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/franczak.jpg">
+                  <img
+                    src="images/franczak.jpg"
+                    alt="Betoniarka"
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/grocery.jpg">
+                  <img
+                    src="images/grocery.jpg"
+                    alt="Sklep spożywczy"
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/kantor.jpg">
+                  <img
+                    src="images/kantor.jpg"
+                    alt="Kantor"
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/kinga_serwis.jpg">
+                  <img
+                    src="images/kinga_serwis.jpg"
+                    alt="Samochód"
+                    class="card-img-top"
+                    style="max-height: 250px; width: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a
+                  class="lightbox"
+                  href="images/lublin_transportation_small.jpg"
+                >
+                  <img
+                    src="images/lublin_transportation_small.jpg"
+                    alt="Park"
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/lublin_transportation.jpg">
+                  <img
+                    src="images/lublin_transportation.jpg"
+                    alt="Park"
+                    class="card-img-top"
+                    style="max-height: 250px; width: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/noobuser.jpg">
+                  <img
+                    src="images/noobuser.jpg"
+                    alt="Koszulki"
+                    class="card-img-top"
+                    style="max-height: 250px; width: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/poltext.jpg">
+                  <img
+                    src="images/poltext.jpg"
+                    alt="Tył ciężarówki"
+                    class="card-img-top"
+                    style="max-height: 250px; width: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/primbud.jpg">
+                  <img
+                    src="images/primbud.jpg"
+                    alt="Samochód"
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/sewage_system_cleaning.jpg">
+                  <img
+                    src="images/sewage_system_cleaning.jpg"
+                    alt="Park"
+                    class="card-img-top"
+                    style="max-height: 250px; width: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/truck_car_wash.jpg">
+                  <img
+                    src="images/truck_car_wash.jpg"
+                    alt="Myjnia ciężarówek"
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/truck_transport.jpg">
+                  <img
+                    src="images/truck_transport.jpg"
+                    alt="Park"
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 my-3">
+              <div class="card">
+                <a class="lightbox" href="images/volvo.jpg">
+                  <img
+                    src="images/volvo.jpg"
+                    alt="Banner Volvo"
+                    class="card-img-top"
+                    style="max-width: 250px; height: auto;"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="footer-copyright text-center">
+      <div class="container-fluid text-white bg-dark py-2">
+        Copyright © Studio Benson 2018
+      </div>
+    </div>
+
+    <script>
+      baguetteBox.run(".tz-gallery");
+    </script>
+  </body>
+</html>

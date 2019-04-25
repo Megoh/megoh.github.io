@@ -1,0 +1,66 @@
+html {
+  font-size: 62.5%;
+  font-family: "Arimo", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(215, 215, 215);
+  color: #fff;
+  height: 100vh;
+}
+
+#wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+#countdown {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#time {
+  display: flex;
+}
+
+#time > * {
+  font-size: 20rem;
+}
+
+#time > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10rem;
+  height: 20rem;
+  overflow: hidden;
+  margin: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  margin: 0;
+}
+
+h3 {
+  letter-spacing: 0.5rem;
+  margin: 0;
+}
+
+#restart {
+  font-size: 1.2rem;
+  position: absolute;
+  color: #000;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#restart:hover {
+  color: #666;
+}

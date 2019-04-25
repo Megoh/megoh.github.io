@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Hangman game</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>HANGMAN</h1>
+      <h2>VANILLA JAVASCRIPT HANGMAN GAME</h2>
+      <p>
+        Use the alphabet below to guess the word.
+      </p>
+      <div id="alphabet">
+        <button>a</button>
+        <button>b</button>
+        <button>c</button>
+        <button>d</button>
+        <button>e</button>
+        <button>f</button>
+        <button>g</button>
+        <button>h</button>
+        <button>i</button>
+        <button>j</button>
+        <button>k</button>
+        <button>l</button>
+        <button>m</button>
+        <button>n</button>
+        <button>o</button>
+        <button>p</button>
+        <button>q</button>
+        <button>r</button>
+        <button>s</button>
+        <button>t</button>
+        <button>u</button>
+        <button>v</button>
+        <button>w</button>
+        <button>x</button>
+        <button>y</button>
+        <button>z</button>
+        <button id="emptyButton"></button>
+      </div>
+      <p>The chosen category is <span id="category"></span>.</p>
+      <p id="word"></p>
+      <p id="gameStatus">You have <span id="amountOfLifes">10</span> lives</p>
+      <div id="hangmanWindow">
+        <canvas id="hangman" width="300px" height="170px"></canvas>
+      </div>
+      <div id="controls">
+        <button id="playAgain">Play again</button>
+      </div>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
