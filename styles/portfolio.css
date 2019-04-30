@@ -1,9 +1,73 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   padding-top: 54px;
 }
 
 .nav-link {
-  transition: 0.3s;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-size: 100% 2px;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#selfie {
+  display: block;
+}
+
+#about-me-description {
+  display: flex;
+  text-align: center;
+  font-size: 20px;
+}
+
+#about-me {
+  height: 100vh;
+}
+
+#contact {
+  height: 80vh;
+}
+
+#about-me > h1,
+#my-projects > h1,
+#contact > h1 {
+  text-align: center;
+}
+
+#my-projects > h1 {
+  margin-bottom: 50px;
+}
+
+#contact > h1 {
+  margin-bottom: 150px;
+}
+
+#social-media {
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+}
+
+#social-media li {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 992px) {
