@@ -1,21 +1,17 @@
 "use strict";
 
 const words = {
-  marksmen: ["jinx", "sivir", "ashe"],
-  controllers: ["pyke", "zyra", "soraka", "blitzcrank"],
-  fighters: ["darius", "hecarim", "vi"],
-  mages: ["xerath", "lux", "brand"],
-  slayers: ["akali", "fiora", "yasuo"],
-  tanks: ["maokai", "braum", "tahm kench"]
+  cities: ["warsaw", "london", "berlin", "moscow", "paris"],
+  countries: ["poland", "england", "germany", "russia", "france"],
+  colors: ["white", "red", "blue", "yellow", "black", "orange", "green"],
+  elements: ["water", "earth", "fire", "air"],
 };
 
 const classes = [
-  "marksmen",
-  "controllers",
-  "fighters",
-  "mages",
-  "slayers",
-  "tanks"
+  "cities",
+  "countries",
+  "colors",
+  "elements",
 ];
 
 const hangmanFunctions = [

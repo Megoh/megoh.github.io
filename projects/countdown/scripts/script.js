@@ -10,12 +10,12 @@ function handleRestartClick(e) {
   const restart = document.querySelector("#restart");
   restart.parentNode.removeChild(restart);
   // set minutes to 1X:XX
-  firstDigitSlot.scrollTop = 229;
+  firstDigitSlot.scrollTop = 230;
   // set minutes to X2:XX
-  secondDigitSlot.scrollTop = 458;
+  secondDigitSlot.scrollTop = 460;
   // set seconds to XX:3X
-  thirdDigitSlot.scrollTop = 687;
-  scrollSeconds(916, fourthDigitSlot);
+  thirdDigitSlot.scrollTop = 690;
+  scrollSeconds(920, fourthDigitSlot);
 }
 
 // set minutes to 1X:XX
@@ -62,9 +62,9 @@ function scrollSeconds(scrollTargetY, digitSlot) {
       digitSlot.scrollTo(0, scrollTargetY);
       if (scrollTargetY === 0) {
         if (
-          firstDigitSlot.scrollTop < 229 &&
-          secondDigitSlot.scrollTop < 229 &&
-          thirdDigitSlot.scrollTop < 229
+          firstDigitSlot.scrollTop < 230 &&
+          secondDigitSlot.scrollTop < 230 &&
+          thirdDigitSlot.scrollTop < 230
         ) {
           document.querySelector("#countdown").style["opacity"] = "0.2";
           const restartCountdown = document.createElement("span");
@@ -79,25 +79,25 @@ function scrollSeconds(scrollTargetY, digitSlot) {
           return;
         }
         //reset seconds back to XX:X9
-        scrollSeconds(2061, digitSlot);
+        scrollSeconds(2070, digitSlot);
         //reset minutes back to XX:X5
         if (thirdDigitSlot.scrollTop === 0) {
           scrollOnce(1145, thirdDigitSlot);
           if (secondDigitSlot.scrollTop === 0) {
-            scrollOnce(2061, secondDigitSlot);
+            scrollOnce(2070, secondDigitSlot);
             if (firstDigitSlot.scrollTop === 0) {
               document.querySelector("#countdown").style["opacity"] = "0.2";
             } else {
-              scrollOnce(firstDigitSlot.scrollTop - 229, firstDigitSlot);
+              scrollOnce(firstDigitSlot.scrollTop - 230, firstDigitSlot);
             }
           } else {
-            scrollOnce(secondDigitSlot.scrollTop - 229, secondDigitSlot);
+            scrollOnce(secondDigitSlot.scrollTop - 230, secondDigitSlot);
           }
         } else {
-          scrollOnce(thirdDigitSlot.scrollTop - 229, thirdDigitSlot);
+          scrollOnce(thirdDigitSlot.scrollTop - 230, thirdDigitSlot);
         }
       } else {
-        scrollSeconds(scrollTargetY - 229, digitSlot);
+        scrollSeconds(scrollTargetY - 230, digitSlot);
       }
     }
   }
@@ -136,5 +136,5 @@ function scrollOnce(scrollTargetY, digitSlot) {
   tick();
 }
 
-// start the countdown at 12:34
-scrollSeconds(2061, fourthDigitSlot);
+// start the countdown at 00:09
+scrollSeconds(2070, fourthDigitSlot);
