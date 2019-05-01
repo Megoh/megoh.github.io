@@ -42,6 +42,15 @@ body {
   height: 100vh;
 }
 
+.row {
+  opacity: 0;
+}
+
+.row.in-view {
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
 #contact {
   height: 80vh;
 }
