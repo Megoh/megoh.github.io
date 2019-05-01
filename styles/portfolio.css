@@ -29,6 +29,7 @@ body {
 
 #selfie {
   display: block;
+  border-radius: 50%;
 }
 
 #about-me-description {
