@@ -4,17 +4,28 @@ html {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  background-color: #c1d72e;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #5c41f0;
 }
 
 #wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 95rem;
-  color: #fff;
+  color: #ffffff;
 }
 
 h1 {
@@ -32,8 +43,8 @@ p {
 }
 
 #alphabet > button {
-  background-color: #fff;
-  color: #c1d72e;
+  background-color: #ffffff;
+  color: #5c41f0;
   border: none;
   border-radius: 0.4rem;
   width: 3.7rem;
@@ -44,15 +55,16 @@ p {
   font-size: 1.8rem;
 }
 
-#alphabet > button:hover {
-  background-color: #c1d72e;
-  color: #fff;
-  border: 1px solid #fff;
-}
-
 #alphabet > button.usedLetter {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   opacity: 0.5;
+}
+
+#alphabet > button:hover {
+  background-color: #5c41f0;
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
 #word {
@@ -63,13 +75,13 @@ p {
 #hangmanWindow {
   width: 33rem;
   height: 18rem;
-  border: 2px dashed #fff;
+  border: 2px dashed #ffffff;
 }
 
 #controls > button {
-  background-color: #c1d72e;
-  color: #fff;
-  border: 1px solid #fff;
+  background-color: #5c41f0;
+  color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 0.4rem;
   cursor: pointer;
   outline: none;
@@ -80,11 +92,13 @@ p {
 }
 
 #controls > button:hover {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #fff;
-  color: #c1d72e;
+  background-color: #ffffff;
+  color: #5c41f0;
 }
 
 #emptyButton {
   vertical-align: top;
 }
+/*# sourceMappingURL=style.css.map */
