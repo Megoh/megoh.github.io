@@ -1,30 +1,49 @@
 html {
   font-size: 62.5%;
   font-family: "Arimo", sans-serif;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(215, 215, 215);
+  background-color: #d7d7d7;
   color: #fff;
   height: 100vh;
 }
 
 #wrapper {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #time {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -33,9 +52,16 @@ body {
 }
 
 #time > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 10rem;
   height: 20rem;
   overflow: hidden;
@@ -54,9 +80,9 @@ h3 {
 }
 
 #restart {
-  font-size: 1.2rem;
   position: absolute;
   color: #000;
+  font-size: 1.2rem;
   font-weight: bolder;
   cursor: pointer;
 }
@@ -64,3 +90,4 @@ h3 {
 #restart:hover {
   color: #666;
 }
+/*# sourceMappingURL=style.css.map */

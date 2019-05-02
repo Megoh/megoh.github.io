@@ -55,16 +55,16 @@ p {
   font-size: 1.8rem;
 }
 
-#alphabet > button.usedLetter {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  opacity: 0.5;
-}
-
 #alphabet > button:hover {
   background-color: #5c41f0;
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+
+#alphabet > button.usedLetter {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0.5;
 }
 
 #word {

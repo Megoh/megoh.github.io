@@ -1,22 +1,30 @@
+.flexDoubleCenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 html {
   font-size: 62.5%;
   font-family: "Open-sans", Arial, sans-serif;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
+  background: -webkit-gradient(linear, left top, right top, from(#25c481), to(#25b7c4));
   background: linear-gradient(to right, #25c481, #25b7c4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
 #accordion {
   background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 150rem;
   height: auto;
   padding: 2rem 1rem;
@@ -28,15 +36,28 @@ body {
 }
 
 .accordionTitleRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 146rem;
   height: 5rem;
+  border-radius: 0.3rem;
   background-color: #bdc3c7;
   color: #7f8c8d;
-  border-radius: 0.3rem;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.accordionTitleRow > p {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-left: 1rem;
 }
 
 .closed .accordionTitleRow {
@@ -46,16 +67,14 @@ body {
   border-bottom-right-radius: 0;
 }
 
-.accordionTitleRow > p {
-  font-size: 2.4rem;
-  font-weight: bold;
-  margin-left: 1rem;
-}
-
 .accordionContent {
   overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  transform-origin: top;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform-origin: top;
+          transform-origin: top;
   font-size: 1.6rem;
   height: auto;
   padding: 1rem;
@@ -65,7 +84,9 @@ body {
 }
 
 .closed .accordionContent {
-  transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
   height: 0;
   padding: 0;
 }
+/*# sourceMappingURL=style.css.map */

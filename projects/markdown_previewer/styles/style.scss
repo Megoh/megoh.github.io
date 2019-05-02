@@ -1,0 +1,106 @@
+$primaryBackground: #c0d8d8;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #87b5b5;
+}
+
+.toolbar {
+  display: block;
+  background-color: #4aa3a3;
+  border-bottom: 0.1rem solid black;
+  box-shadow: 0 0 1rem black;
+  z-index: 0;
+
+  h2 {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+.expandIcon {
+  cursor: pointer;
+  float: right;
+  transform: rotate(45deg);
+
+  &:hover {
+    color: #57e2b1;
+  }
+}
+
+#editorWrap {
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  height: 20rem;
+  margin-bottom: 1rem;
+  border: 0.1rem solid black;
+
+  &.clicked {
+    width: 100%;
+    height: 100%;
+  }
+  &.hidden {
+    display: none;
+  }
+}
+
+#editor {
+  min-width: 100%;
+  max-width: 100%;
+  border: 0;
+  padding: 0;
+  flex-grow: 1;
+  background-color: $primaryBackground;
+  outline: none;
+  box-shadow: 0 0 1rem black;
+}
+
+#previewWrap {
+  display: flex;
+  flex-direction: column;
+  width: 83rem;
+
+  &.clicked {
+    width: 100%;
+    height: 100%;
+  }
+  &.hidden {
+    display: none;
+  }
+}
+
+#preview {
+  flex-grow: 1;
+
+  max-width: 100%;
+  min-height: 15rem;
+  box-shadow: 0 0 1rem black;
+
+  background-color: $primaryBackground;
+
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  pre {
+    background-color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+}

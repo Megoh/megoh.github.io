@@ -1,0 +1,96 @@
+html {
+  background-position: top left;
+
+  background: url(../images/seamless_paper_texture.png) top left repeat;
+}
+
+body {
+  margin: 15px;
+}
+
+.league {
+  align-items: center;
+  justify-content: center;
+  height: 95px;
+}
+
+h5 {
+  display: flex;
+  justify-content: center;
+}
+
+#bronzeColumns {
+  display: flex;
+  align-items: center;
+}
+
+#silverColumns,
+#goldColumns,
+#platinumColumns,
+#diamondColumns,
+#masterColumns,
+#challengerColumns {
+  align-items: center;
+  display: none;
+}
+
+#rpColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columns {
+  img {
+    height: 60px;
+
+    &:hover {
+      height: 70px;
+      cursor: pointer;
+    }
+    &:active {
+      height: 60px;
+      cursor: pointer;
+    }
+  }
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rpButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 200px;
+}
+
+.deleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 200px;
+}
+
+#rpDiv {
+  width: 350px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#introduction {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 35%;
+  top: 35%;
+  width: 475px;
+}

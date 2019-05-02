@@ -1,12 +1,20 @@
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 62.5%;
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #87b5b5;
 }
 
@@ -14,7 +22,8 @@ body {
   display: block;
   background-color: #4aa3a3;
   border-bottom: 0.1rem solid black;
-  box-shadow: 0 0 1rem black;
+  -webkit-box-shadow: 0 0 1rem black;
+          box-shadow: 0 0 1rem black;
   z-index: 0;
 }
 
@@ -24,9 +33,10 @@ body {
 }
 
 .expandIcon {
-  float: right;
   cursor: pointer;
-  transform: rotate(45deg);
+  float: right;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .expandIcon:hover {
@@ -34,8 +44,13 @@ body {
 }
 
 #editorWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 60rem;
   height: 20rem;
   margin-bottom: 1rem;
@@ -56,15 +71,23 @@ body {
   max-width: 100%;
   border: 0;
   padding: 0;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   background-color: #c0d8d8;
   outline: none;
-  box-shadow: 0 0 1rem black;
+  -webkit-box-shadow: 0 0 1rem black;
+          box-shadow: 0 0 1rem black;
 }
 
 #previewWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 83rem;
 }
 
@@ -78,11 +101,14 @@ body {
 }
 
 #preview {
-  background-color: #c0d8d8;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   max-width: 100%;
-  flex-grow: 1;
   min-height: 15rem;
-  box-shadow: 0 0 1rem black;
+  -webkit-box-shadow: 0 0 1rem black;
+          box-shadow: 0 0 1rem black;
+  background-color: #c0d8d8;
 }
 
 #preview h1 {
@@ -106,3 +132,4 @@ body {
   font-size: 1.4rem;
   font-weight: bold;
 }
+/*# sourceMappingURL=style.css.map */

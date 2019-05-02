@@ -48,14 +48,14 @@ p {
     outline: none;
     margin: 0.4rem;
     font-size: 1.8rem;
-    &.usedLetter {
-      transition: 0.5s;
-      opacity: 0.5;
-    }
     &:hover {
       background-color: map-get($colors, primary);
       color: map-get($colors, white);
       border: 1px solid map-get($colors, white);
+    }
+    &.usedLetter {
+      transition: 0.5s;
+      opacity: 0.5;
     }
   }
 }
