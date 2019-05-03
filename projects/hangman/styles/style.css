@@ -81,7 +81,7 @@ p {
 #controls > button {
   background-color: #5c41f0;
   color: #ffffff;
-  border: 1px solid #ffffff;
+  border: #ffffff;
   border-radius: 0.4rem;
   cursor: pointer;
   outline: none;

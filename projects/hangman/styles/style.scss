@@ -3,6 +3,10 @@ $colors: (
   white: #ffffff
 );
 
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
 html {
   font-size: 62.5%;
   font-family: "Lato", sans-serif;
@@ -11,7 +15,7 @@ html {
 body {
   display: flex;
   justify-content: center;
-  background-color: map-get($colors, primary);
+  background-color: color(primary);
 }
 
 #wrapper {
@@ -19,7 +23,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 95rem;
-  color: map-get($colors, white);
+  color: color(white);
 }
 
 h1 {
@@ -38,8 +42,8 @@ p {
 
 #alphabet {
   > button {
-    background-color: map-get($colors, white);
-    color: map-get($colors, primary);
+    background-color: color(white);
+    color: color(primary);
     border: none;
     border-radius: 0.4rem;
     width: 3.7rem;
@@ -49,9 +53,9 @@ p {
     margin: 0.4rem;
     font-size: 1.8rem;
     &:hover {
-      background-color: map-get($colors, primary);
-      color: map-get($colors, white);
-      border: 1px solid map-get($colors, white);
+      background-color: color(primary);
+      color: color(white);
+      border: 1px solid color(white);
     }
     &.usedLetter {
       transition: 0.5s;
@@ -68,14 +72,14 @@ p {
 #hangmanWindow {
   width: 33rem;
   height: 18rem;
-  border: 2px dashed map-get($colors, white);
+  border: 2px dashed color(white);
 }
 
 #controls {
   > button {
-    background-color: map-get($colors, primary);
-    color: map-get($colors, white);
-    border: 1px solid map-get($colors, white);
+    background-color: color(primary);
+    color: color(white);
+    border: color(white);
     border-radius: 0.4rem;
     cursor: pointer;
     outline: none;
@@ -85,8 +89,8 @@ p {
     margin: 1rem;
     &:hover {
       transition: 0.5s;
-      background-color: map-get($colors, white);
-      color: map-get($colors, primary);
+      background-color: color(white);
+      color: color(primary);
     }
   }
 }
