@@ -26,5 +26,5 @@ expandPreviewerIcon.onclick = function() {
 };
 
 window.onload = () => {
-  preview.innerHTML = marked(document.getElementById("editor").innerHTML);
+  preview.innerHTML = marked(document.getElementById("editor").textContent);
 };
