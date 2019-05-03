@@ -8,6 +8,12 @@ body {
   padding-top: 54px;
 }
 
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
 .nav-link {
   background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
   background-image: linear-gradient(currentColor, currentColor);
@@ -93,12 +99,6 @@ body {
 #social-media li {
   font-size: 24px;
   margin-bottom: 20px;
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
 }
 
 .pagination {

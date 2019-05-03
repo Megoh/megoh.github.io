@@ -1,4 +1,10 @@
+$desktop: 992px;
 
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
 
 html {
   box-sizing: border-box;
@@ -7,6 +13,10 @@ html {
 
 body {
   padding-top: 54px;
+
+  @include desktop {
+    padding-top: 56px;
+  }
 }
 
 .nav-link {
@@ -77,12 +87,6 @@ body {
   li {
     font-size: 24px;
     margin-bottom: 20px;
-  }
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
   }
 }
 
