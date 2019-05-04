@@ -58,6 +58,15 @@ body {
   font-size: 20px;
 }
 
+#about-me-description > a {
+  text-decoration: none;
+  color: black;
+}
+
+.typewrite > .wrap {
+  border-right: 0.15em solid black;
+}
+
 #about-me {
   height: 100vh;
 }
@@ -101,7 +110,23 @@ body {
   margin-bottom: 20px;
 }
 
-.pagination {
-  margin-bottom: 15px;
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */
