@@ -55,7 +55,6 @@ TxtType.prototype.tick = function() {
     // inject css
     if (amountOfCSSInjectionsLeft === 1) {
       var css = document.createElement("style");
-      css.type = "text/css";
       css.innerHTML =
         ".typewrite > .wrap { border-right: .15em solid #000; animation: blink-caret 0.75s step-end infinite; }";
       document.body.appendChild(css);
