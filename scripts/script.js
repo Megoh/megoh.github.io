@@ -1,12 +1,17 @@
-var amountOfCSSInjectionsLeft = 1;
+"use strict";
 
-$(function() {
-  var navMain = $(".navbar-collapse");
+const navToggler = document.querySelector("#navToggler");
+const nav = document.querySelector("#nav");
+const navList = document.querySelector("#navList");
+const navListItems = document.querySelectorAll(".nav-list__item");
 
-  navMain.on("click", "a", null, function() {
-    navMain.collapse("hide");
-  });
-});
+const projects = document.querySelectorAll(".my-projects__project");
+
+let amountOfCSSInjectionsLeft = 1;
+
+function collapseNavMenu() {
+  nav.classList.remove("expanded");
+}
 
 function isInViewport(elem) {
   var bounding = elem.getBoundingClientRect();
@@ -20,17 +25,7 @@ function isInViewport(elem) {
   );
 }
 
-var items = document.querySelectorAll(".row");
-
-function callbackFunc() {
-  for (var i = 0; i < items.length; i++) {
-    if (isInViewport(items[i])) {
-      items[i].classList.add("in-view");
-    }
-  }
-}
-
-var TxtType = function(el, toRotate, period) {
+let TxtType = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -40,21 +35,21 @@ var TxtType = function(el, toRotate, period) {
 };
 
 TxtType.prototype.tick = function() {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
+  let i = this.loopNum % this.toRotate.length;
+  let fullTxt = this.toRotate[i];
 
   this.txt = fullTxt.substring(0, this.txt.length + 1);
 
   this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
 
-  var that = this;
-  var delta = 100 - Math.random() * 100;
+  let that = this;
+  let delta = 100 - Math.random() * 100;
 
   if (this.txt === fullTxt) {
     delta = this.period;
     // inject css
     if (amountOfCSSInjectionsLeft === 1) {
-      var css = document.createElement("style");
+      let css = document.createElement("style");
       css.innerHTML =
         ".typewrite > .wrap { border-right: .15em solid #000; animation: blink-caret 0.75s step-end infinite; }";
       document.body.appendChild(css);
@@ -68,16 +63,30 @@ TxtType.prototype.tick = function() {
 };
 
 window.onload = function() {
-  var elements = document.getElementsByClassName("typewrite");
-  for (var i = 0; i < elements.length; i++) {
-    var toRotate = elements[i].getAttribute("data-type");
-    var period = elements[i].getAttribute("data-period");
+  let elements = document.getElementsByClassName("typewrite");
+  for (let i = 0; i < elements.length; i++) {
+    let toRotate = elements[i].getAttribute("data-type");
+    let period = elements[i].getAttribute("data-period");
     if (toRotate) {
       new TxtType(elements[i], JSON.parse(toRotate), period);
     }
   }
 };
 
-window.addEventListener("load", callbackFunc);
-window.addEventListener("resize", callbackFunc);
-window.addEventListener("scroll", callbackFunc);
+function toggleNavbar() {
+  nav.classList.toggle("expanded");
+}
+
+function showProject() {
+  for (let i = 0; i < projects.length; i++) {
+    if (isInViewport(projects[i])) {
+      projects[i].classList.add("in-view");
+    }
+  }
+}
+
+navToggler.addEventListener("click", toggleNavbar);
+navListItems.forEach(i => i.addEventListener("click", collapseNavMenu));
+window.addEventListener("load", showProject);
+window.addEventListener("resize", showProject);
+window.addEventListener("scroll", showProject);

@@ -1,121 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Dominik Wołowicz - portfolio</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Custom styles for this template -->
-    <link href="styles/portfolio.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="icons/fontawesome-free-5.9.0-web/css/all.min.css"
+    />
   </head>
-
   <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Dominik Wołowicz</a>
+    <nav id="nav" class="nav">
+      <div class="nav-container">
         <button
-          class="navbar-toggler"
+          id="navToggler"
+          class="nav-toggler"
           type="button"
-          data-toggle="collapse"
           data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="nav-hamburger-menu"><i class="fas fa-bars"></i></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about-me">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#my-projects">My Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://drive.google.com/file/d/1zij90A5h9B_7T2Pp_ZSWh2kjtcHE8uL_/view"
-                target="_blank"
-                rel="noopener"
-                >Resume</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <section id="about-me">
-      <h1>About Me</h1>
-      <img
-        src="images/selfie_05.2018.jpg"
-        alt="Dominik Wołowicz"
-        width="250"
-        height="250"
-        id="selfie"
-      />
-      <p id="about-me-description">
-        <a
-          href=""
-          class="typewrite"
-          data-period="10000"
-          data-type='[ "Hi, I am Dominik and I learn coding websites in HTML, CSS and Javascript by myself." ]'
-        >
-          <span class="wrap"></span>
-        </a>
-      </p>
-    </section>
-
-    <section id="my-projects">
-      <h1>My Projects</h1>
-      <!-- Page Content -->
-      <div class="container">
-        <!-- Project One -->
-        <div class="row">
-          <div class="col-md-7">
+        <ul id="navList" class="nav-list">
+          <li class="nav-list__item"><a href="#about-me">About Me</a></li>
+          <li class="nav-list__item"><a href="#my-projects">My Projects</a></li>
+          <li class="nav-list__item"><a href="#contact">Contact</a></li>
+          <li class="nav-list__item">
             <a
-              href="projects/studio-benson/index.html"
+              href="https://drive.google.com/file/d/1V0fjtRWowq5DogVWgg92_h0OfuZQcBN8/view?usp=sharing"
               target="_blank"
               rel="noopener"
+              >Resume</a
             >
-              <img
-                class="img-fluid rounded mb-3 mb-md-0"
-                src="projects/studio-benson/images/studio_benson_white.jpg"
-                alt="Studio Benson thumbnail"
-              />
-            </a>
-          </div>
-          <div class="col-md-5">
-            <h3>Studio Benson</h3>
-            <p>
-              Website project with 2 subpages for Benson commercial studio.
-              Sticking large format boards, shopwindows, buildings and cars;
-              banners, leaflets, posters, blouses, water for companies and
-              more...
-            </p>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main">
+      <section id="about-me" class="about-me">
+        <h1 class="about-me__header">About Me</h1>
+        <img class="selfie" src="images/selfie_05.2018.jpg" alt="my selfie" />
+        <p id="about-me__description">
+          <a
+            href=""
+            class="typewrite"
+            data-period="10000"
+            data-type='[ "Hi, I am Dominik and I learn coding websites in HTML, CSS and Javascript by myself." ]'
+          >
+            <span class="wrap"></span>
+          </a>
+        </p>
+      </section>
+      <section id="my-projects" class="my-projects">
+        <h1 class="my-projects__header">My Projects</h1>
+        <div class="my-projects__project">
+          <a
+            class="my-project__project-thumbnail"
+            href="projects/studio-benson/index.html"
+            target="_blank"
+            rel="noopener"
+            ><img
+              class="project-thumbnail"
+              src="images/studio_benson_white.jpg"
+              alt="studio benson thumbnail"
+          /></a>
+          <h2 class="my-projects__project-title">Studio Benson</h2>
+          <p class="my-projects__project-description">
+            Website project with 2 subpages for Benson commercial studio.
+            Sticking large format boards, shopwindows, buildings and cars;
+            banners, leaflets, posters, blouses, water for companies and more...
+          </p>
+          <div class="my-projects__project-buttons">
             <a
-              class="btn btn-primary"
+              class="btn"
               href="projects/studio-benson/index.html"
               target="_blank"
               rel="noopener"
               >Website</a
-            >
-            <a
-              class="btn btn-primary"
+            ><a
+              class="btn"
               href="https://github.com/Megoh/megoh.github.io/tree/master/projects/studio-benson"
               target="_blank"
               rel="noopener"
@@ -123,40 +88,31 @@
             >
           </div>
         </div>
-
-        <hr />
-
-        <!-- Project Two -->
-        <div class="row">
-          <div class="col-md-7">
+        <div class="my-projects__project">
+          <a
+            class="my-project__project-thumbnail"
+            href="projects/rp-clicker-game/game.html"
+            target="_blank"
+            rel="noopener"
+            ><img
+              class="project-thumbnail"
+              src="images/leagueoflegends.jpg"
+              alt="rp clicker"
+          /></a>
+          <h2 class="my-projects__project-title">RP Clicker</h2>
+          <p class="my-projects__project-description">
+            My own idea for an incremental idle clicker game. Click and gain RP
+            to afford better players, which in turn will gain more RP for you.
+          </p>
+          <div class="my-projects__project-buttons">
             <a
-              href="projects/rp-clicker-game/game.html"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                class="img-fluid rounded mb-3 mb-md-0"
-                src="projects/rp-clicker-game/images/leagueoflegends.jpg"
-                alt="RP Click Game thumbnail"
-              />
-            </a>
-          </div>
-          <div class="col-md-5">
-            <h3>RP Clicker</h3>
-            <p>
-              My own idea for an incremental idle clicker game. Click and gain
-              RP to afford better players, which in turn will gain more RP for
-              you.
-            </p>
-            <a
-              class="btn btn-primary"
+              class="btn"
               href="projects/rp-clicker-game/game.html"
               target="_blank"
               rel="noopener"
               >Website</a
-            >
-            <a
-              class="btn btn-primary"
+            ><a
+              class="btn"
               href="https://github.com/Megoh/megoh.github.io/tree/master/projects/rp-clicker-game"
               target="_blank"
               rel="noopener"
@@ -164,41 +120,33 @@
             >
           </div>
         </div>
-
-        <hr />
-
-        <!-- Project Three -->
-        <div class="row">
-          <div class="col-md-7">
+        <div class="my-projects__project">
+          <a
+            class="my-project__project-thumbnail"
+            href="projects/accordion/index.html"
+            target="_blank"
+            rel="noopener"
+            ><img
+              class="project-thumbnail"
+              src="images/accordion-thumbnail.png"
+              alt="accordion app"
+          /></a>
+          <h2 class="my-projects__project-title">Accordion</h2>
+          <p class="my-projects__project-description">
+            Small menu app which behaves like an accordion. Upon clicking one of
+            menu items, the other items collapse. It is useful in situations
+            where the content of each of accordion items takes too much place so
+            the other need to be hidden.
+          </p>
+          <div class="my-projects__project-buttons">
             <a
-              href="projects/accordion/index.html"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                class="img-fluid rounded mb-3 mb-md-0"
-                src="images/accordion-thumbnail.png"
-                alt="Accordion thumbnail"
-              />
-            </a>
-          </div>
-          <div class="col-md-5">
-            <h3>Accordion</h3>
-            <p>
-              Small menu app which behaves like an accordion. Upon clicking one
-              of menu items, the other items collapse. It is useful in
-              situations where the content of each of accordion items takes too
-              much place so the other need to be hidden.
-            </p>
-            <a
-              class="btn btn-primary"
+              class="btn"
               href="projects/accordion/index.html"
               target="_blank"
               rel="noopener"
               >Website</a
-            >
-            <a
-              class="btn btn-primary"
+            ><a
+              class="btn"
               href="https://github.com/Megoh/megoh.github.io/tree/master/projects/accordion"
               target="_blank"
               rel="noopener"
@@ -206,41 +154,32 @@
             >
           </div>
         </div>
-
-        <hr />
-
-        <!-- Project Four -->
-        <div class="row">
-          <div class="col-md-7">
+        <div class="my-projects__project">
+          <a
+            class="my-project__project-thumbnail"
+            href="projects/countdown/index.html"
+            target="_blank"
+            rel="noopener"
+            ><img
+              class="project-thumbnail"
+              src="images/countdown-thumbnail.png"
+              alt="countdown app"
+          /></a>
+          <h2 class="my-projects__project-title">Countdown</h2>
+          <p class="my-projects__project-description">
+            Simple timer app which first counts down from 10 seconds and then
+            prompts you to reset the timer which is afterwards set to 12 minutes
+            and 34 seconds. Contains animation of digits moving vertically.
+          </p>
+          <div class="my-projects__project-buttons">
             <a
-              href="projects/countdown/index.html"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                class="img-fluid rounded mb-3 mb-md-0"
-                src="images/countdown-thumbnail.png"
-                alt="Countdown thumbnail"
-              />
-            </a>
-          </div>
-          <div class="col-md-5">
-            <h3>Countdown</h3>
-            <p>
-              Simple timer app which first counts down from 10 seconds and then
-              prompts you to reset the timer which is afterwards set to 12
-              minutes and 34 seconds. Contains animation of digits moving
-              vertically.
-            </p>
-            <a
-              class="btn btn-primary"
+              class="btn"
               href="projects/countdown/index.html"
               target="_blank"
               rel="noopener"
               >Website</a
-            >
-            <a
-              class="btn btn-primary"
+            ><a
+              class="btn"
               href="https://github.com/Megoh/megoh.github.io/tree/master/projects/countdown"
               target="_blank"
               rel="noopener"
@@ -248,39 +187,31 @@
             >
           </div>
         </div>
-
-        <hr />
-
-        <!-- Project Five -->
-        <div class="row">
-          <div class="col-md-7">
+        <div class="my-projects__project">
+          <a
+            class="my-project__project-thumbnail"
+            href="projects/vertical-timeline/index.html"
+            target="_blank"
+            rel="noopener"
+            ><img
+              class="project-thumbnail"
+              src="images/vertical-timeline-thumbnail.png"
+              alt="vertical timeline app"
+          /></a>
+          <h2 class="my-projects__project-title">Vertical Timeline</h2>
+          <p class="my-projects__project-description">
+            Timeline with boxes which appear gradually as you scroll down the
+            page. Some appear from the left and some from the other side.
+          </p>
+          <div class="my-projects__project-buttons">
             <a
-              href="projects/vertical-timeline/index.html"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                class="img-fluid rounded mb-3 mb-md-0"
-                src="images/vertical-timeline-thumbnail.png"
-                alt="Vertical Timeline thumbnail"
-              />
-            </a>
-          </div>
-          <div class="col-md-5">
-            <h3>Vertical Timeline</h3>
-            <p>
-              Timeline with boxes which appear gradually as you scroll down the
-              page. Some appear from the left and some from the other side.
-            </p>
-            <a
-              class="btn btn-primary"
+              class="btn"
               href="projects/vertical-timeline/index.html"
               target="_blank"
               rel="noopener"
               >Website</a
-            >
-            <a
-              class="btn btn-primary"
+            ><a
+              class="btn"
               href="https://github.com/Megoh/megoh.github.io/tree/master/projects/vertical-timeline"
               target="_blank"
               rel="noopener"
@@ -288,40 +219,32 @@
             >
           </div>
         </div>
-
-        <hr />
-
-        <!-- Project Six -->
-        <div class="row">
-          <div class="col-md-7">
+        <div class="my-projects__project">
+          <a
+            class="my-project__project-thumbnail"
+            href="projects/hangman/index.html"
+            target="_blank"
+            rel="noopener"
+            ><img
+              class="project-thumbnail"
+              src="images/hangman-game-thumbnail.png"
+              alt="hangman game"
+          /></a>
+          <h2 class="my-projects__project-title">Hangman Game</h2>
+          <p class="my-projects__project-description">
+            Classic game of hangman in which you guess letters belonging to the
+            solution. Every wrong letter draws another part of a hanged stickman
+            and you have only 10 opportunities to miss.
+          </p>
+          <div class="my-projects__project-buttons">
             <a
-              href="projects/hangman/index.html"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                class="img-fluid rounded mb-3 mb-md-0"
-                src="images/hangman-game-thumbnail.png"
-                alt="Hangman Game thumbnail"
-              />
-            </a>
-          </div>
-          <div class="col-md-5">
-            <h3>Hangman Game</h3>
-            <p>
-              Classic game of hangman in which you guess letters belonging to
-              the solution. Every wrong letter draws another part of a hanged
-              stickman and you have only 10 opportunities to miss.
-            </p>
-            <a
-              class="btn btn-primary"
+              class="btn"
               href="projects/hangman/index.html"
               target="_blank"
               rel="noopener"
               >Website</a
-            >
-            <a
-              class="btn btn-primary"
+            ><a
+              class="btn"
               href="https://github.com/Megoh/megoh.github.io/tree/master/projects/hangman"
               target="_blank"
               rel="noopener"
@@ -329,40 +252,32 @@
             >
           </div>
         </div>
-
-        <hr />
-
-        <!-- Project Seven -->
-        <div class="row">
-          <div class="col-md-7">
+        <div class="my-projects__project">
+          <a
+            class="my-project__project-thumbnail"
+            href="projects/markdown_previewer/index.html"
+            target="_blank"
+            rel="noopener"
+            ><img
+              class="project-thumbnail"
+              src="images/markdown-previewer-thumbnail.png"
+              alt="markdown previewer app"
+          /></a>
+          <h2 class="my-projects__project-title">Markdown Previewer</h2>
+          <p class="my-projects__project-description">
+            Code previewer which updates the code in the second window in live
+            time as you write code in the first one. Uses a library called
+            Marked to translate input into proper output.
+          </p>
+          <div class="my-projects__project-buttons">
             <a
-              href="projects/markdown_previewer/index.html"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                class="img-fluid rounded mb-3 mb-md-0"
-                src="images/markdown-previewer-thumbnail.png"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-md-5">
-            <h3>Markdown Previewer</h3>
-            <p>
-              Code previewer which updates the code in the second window in live
-              time as you write code in the first one. Uses a library called
-              Marked to translate input into proper output.
-            </p>
-            <a
-              class="btn btn-primary"
+              class="btn"
               href="projects/markdown_previewer/index.html"
               target="_blank"
               rel="noopener"
               >Website</a
-            >
-            <a
-              class="btn btn-primary"
+            ><a
+              class="btn"
               href="https://github.com/Megoh/megoh.github.io/tree/master/projects/markdown_previewer"
               target="_blank"
               rel="noopener"
@@ -370,53 +285,36 @@
             >
           </div>
         </div>
-
-        <hr />
-      </div>
-    </section>
-
-    <section id="contact">
-      <h1>Contact</h1>
-      <ul id="social-media">
-        <li>
-          <a href="mailto:dominikwolowicz@gmail.com">Gmail</a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/dominik-wo%C5%82owicz-07b114124/"
-            target="_blank"
-            rel="noopener"
-            >LinkedIn</a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/Megoh" target="_blank" rel="noopener"
-            >GitHub</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.facebook.com/dominik.wolowicz"
-            target="_blank"
-            rel="noopener"
-            >Facebook</a
-          >
-        </li>
-        <li>Phone: 502 388 963</li>
-      </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">
-          Copyright &copy; 2019
-        </p>
-      </div>
-    </footer>
-
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      </section>
+      <section id="contact" class="contact">
+        <h1 class="contact__header">Contact</h1>
+        <ul class="contact-list">
+          <li class="contact-list__item">
+            <a href="mailto:dominikwolowicz@gmail.com">Gmail</a>
+          </li>
+          <li class="contact-list__item">
+            <a
+              href="https://www.linkedin.com/in/dominik-wo%C5%82owicz-07b114124/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+          </li>
+          <li class="contact-list__item">
+            <a href="https://github.com/Megoh" target="_blank" rel="noopener"
+              >GitHub</a
+            >
+          </li>
+          <li class="contact-list__item">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"
+              >Facebook</a
+            >
+          </li>
+          <li class="contact-list__item">Phone: 502 388 963</li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">Copyright Dominik Wołowicz © 2019</footer>
     <script src="scripts/script.js"></script>
   </body>
 </html>
