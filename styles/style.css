@@ -244,7 +244,7 @@ section > h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 20rem;
+  height: 22rem;
   padding: 1.5rem;
 }
 
@@ -412,7 +412,7 @@ section > h1 {
   width: 100%;
 }
 
-.selfie {
+.my-photo {
   border-radius: 50%;
   border: 2px solid #000;
   margin-top: 10rem;

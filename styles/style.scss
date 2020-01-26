@@ -194,7 +194,7 @@ section {
   background-color: $black;
   &.expanded {
     display: flex;
-    height: 20rem;
+    height: 22rem;
     padding: 1.5rem;
     @include for-tablet-landscape-up {
       display: flex;
@@ -299,7 +299,7 @@ section {
   width: 100%;
 }
 
-.selfie {
+.my-photo {
   border-radius: 50%;
   border: 2px solid #000;
   margin-top: 10rem;
